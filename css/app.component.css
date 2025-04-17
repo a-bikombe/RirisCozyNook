@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav-list li {
+  margin: 0 20px;
+}
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.nav-list a:hover {
+  color: #db97f0;
+  /* Change color on hover */
+}
+.nav-list a.active {
+  color: #e6bcf3;
+  font-weight: bold;
+}/*# sourceMappingURL=app.component.css.map */

@@ -1,0 +1,62 @@
+@use "../assets/variables" as *;
+
+h1 {
+    background-color: $pink-med;
+    color: $white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+
+    a {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $black;
+            /* Change color on hover */
+        }
+    }
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: $purple;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 0 20px;
+    }
+
+    a {
+
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $black;
+            /* Change color on hover */
+        }
+
+        &.active {
+            color: #38273d;
+            font-weight: bold;
+        }
+    }
+}
+
+main {
+    margin: 20px;
+}
