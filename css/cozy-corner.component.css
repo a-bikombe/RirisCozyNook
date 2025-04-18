@@ -1,0 +1,8 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.row aside {
+  display: block;
+  width: 30%;
+}/*# sourceMappingURL=cozy-corner.component.css.map */

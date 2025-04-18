@@ -49,11 +49,7 @@ a {
 }
 
 main {
-  height: 77%;
-  margin: 0 30px;
-  overflow-y: auto;
-  position: relative;
-  scrollbar-color: #7A7A7A;
+  margin: 0 50px;
 }
 
 .footer {
@@ -63,6 +59,5 @@ main {
   color: #FCFCFC;
   width: 100%;
   padding: 5px 0;
-  position: fixed;
   text-align: center;
 }/*# sourceMappingURL=app.component.css.map */
