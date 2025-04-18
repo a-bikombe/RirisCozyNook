@@ -1,32 +1,68 @@
 h1 {
+  background-color: #f2bfc5;
+  color: #FCFCFC;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 20px;
   text-align: center;
+}
+h1 a {
+  transition: color 0.3s ease-in-out;
+}
+h1 a:hover {
+  color: #7A7A7A;
+  /* Change color on hover */
+}
+
+a {
+  color: #FCFCFC;
+  text-decoration: none;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #D9D4E7;
   padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .nav-list {
   display: flex;
   justify-content: center;
   list-style: none;
+  padding: 0;
 }
 .nav-list li {
   margin: 0 20px;
 }
 .nav-list a {
-  color: white;
-  text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
 .nav-list a:hover {
-  color: #db97f0;
+  color: #7A7A7A;
   /* Change color on hover */
 }
 .nav-list a.active {
-  color: #e6bcf3;
+  color: #38273d;
   font-weight: bold;
+}
+
+main {
+  height: 77%;
+  margin: 0 30px;
+  overflow-y: auto;
+  position: relative;
+  scrollbar-color: #7A7A7A;
+}
+
+.footer {
+  background-color: #D9D4E7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  bottom: 0px;
+  color: #FCFCFC;
+  width: 100%;
+  padding: 5px 0;
+  position: fixed;
+  text-align: center;
 }/*# sourceMappingURL=app.component.css.map */

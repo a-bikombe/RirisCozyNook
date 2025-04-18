@@ -1,11 +1,14 @@
-<header>
+<header class="header">
     <h1><a routerLink="/" routerLinkActive="active"> {{ title }} </a></h1>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a routerLink="/favorites" routerLinkActive="active">Favorites</a></li>
+            <li><a routerLink="/cozy-corner" routerLinkActive="active">Cozy Corner</a></li>
+            <li><a routerLink="/dreams" routerLinkActive="active">Dreams</a></li>
+        </ul>
+    </nav>
 </header>
-<nav class="navbar">
-    <ul class="nav-list">
-        <li><a routerLink="/favorites" routerLinkActive="active">Favorites</a></li>
-        <li><a routerLink="/cozy-corner" routerLinkActive="active">Cozy Corner</a></li>
-        <li><a routerLink="/dreams" routerLinkActive="active">Dreams</a></li>
-    </ul>
-</nav>
 <main><router-outlet /></main>
+<footer class="footer">
+    <p>Footer</p>
+</footer>
