@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/app/components/cozy-corner/cozy-corner.component.scss","cozy-corner.component.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,8BAAA;ACCJ;ADCI;EACI,cAAA;EACA,UAAA;ACCR","file":"cozy-corner.component.css"}
+{"version":3,"sources":["../src/app/components/cozy-corner/cozy-corner.component.scss","cozy-corner.component.css"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,aAAA;EACA,sBAAA;ACCJ;;ADEA;EACI,8BAAA;ACCJ;;ADEA;EACI,UAAA;ACCJ;;ADEA;EACI,cAAA;EACA,UAAA;ACCJ;;ADEA;EACI;IACI,sBAAA;ECCN;EDEE;IACI,WAAA;ECAN;AACF","file":"cozy-corner.component.css"}

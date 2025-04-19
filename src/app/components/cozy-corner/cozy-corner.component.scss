@@ -1,9 +1,28 @@
-.row {
+:host {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
 
-    aside {
-        display: block;
-        width: 30%;
+section {
+    justify-content: space-between;
+}
+
+article {
+    width: 50%;
+}
+
+aside {
+    display: block;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    article, aside {
+        width: 100%;
     }
 }

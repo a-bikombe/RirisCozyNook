@@ -26,7 +26,7 @@ a {
 .navbar {
     background-color: $purple;
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: $shadow;
 }
 
 .nav-list {
@@ -58,16 +58,22 @@ a {
 }
 
 main {
-    margin: 0 50px;
+    margin: 0 500px;
 }
 
 .footer {
     background-color: $purple;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: $shadow;
     bottom: 0px;
     color: $white;
     width: 100%;
     padding: 5px 0;
     position: fixed;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 0 30px;
+    }
 }

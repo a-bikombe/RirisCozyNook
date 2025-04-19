@@ -40,9 +40,13 @@ body {
 
 .card {
   background-color: #FFE5B4;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   color: #7A7A7A;
+  margin: 20px;
   padding: 20px;
   width: 40%;
+}
+
+.card, img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }/*# sourceMappingURL=styles.css.map */

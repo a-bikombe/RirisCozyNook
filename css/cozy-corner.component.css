@@ -1,8 +1,27 @@
-.row {
+:host {
+  align-items: center;
   display: flex;
+  flex-direction: column;
+}
+
+section {
   justify-content: space-between;
 }
-.row aside {
+
+article {
+  width: 50%;
+}
+
+aside {
   display: block;
-  width: 30%;
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  article, aside {
+    width: 100%;
+  }
 }/*# sourceMappingURL=cozy-corner.component.css.map */

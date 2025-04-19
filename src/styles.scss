@@ -36,9 +36,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .card {
     background-color: $yellow;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     color: $black;
+    margin: 20px;
     padding: 20px;
     width: 40%;
+}
+
+.card, img {
+    border-radius: 10px;
+    box-shadow: $shadow;
 }

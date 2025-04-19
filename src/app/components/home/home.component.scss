@@ -8,10 +8,25 @@
 
 .personality {
     background-color: $pink;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    color: $black;
     justify-content: space-evenly;
     padding: 0 20px;
-    width: 60%;
+    width: 100%;
+}
+
+.list {
+    text-align: center;
+}
+
+.home-info {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.home-img {
+    width: 40%;
+}
+
+.home-blurb {
+    margin: 0;
+    width: 40%;
 }
