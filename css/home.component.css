@@ -1,0 +1,15 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.personality {
+  background-color: #FADADD;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  color: #7A7A7A;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  width: 60%;
+}/*# sourceMappingURL=home.component.css.map */

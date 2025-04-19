@@ -1,11 +1,11 @@
 <h2> {{ header }} </h2>
 
-<mat-list *ngFor="let idea of ideas">
-    <mat-list-item> {{ idea }} </mat-list-item>
-</mat-list>
+<ul *ngFor="let idea of ideas" class="list">
+    <li> {{ idea }} </li>
+</ul>
 
 <br />
 
-<mat-list *ngFor="let goal of aprilBucketList">
-    <mat-list-item> {{ goal }} </mat-list-item>
-</mat-list>
+<ul *ngFor="let goal of aprilBucketList" class="list">
+    <li> {{ goal }} </li>
+</ul>

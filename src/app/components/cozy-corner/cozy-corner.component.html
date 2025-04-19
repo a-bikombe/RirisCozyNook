@@ -1,12 +1,12 @@
 <h2> {{ header }} </h2>
 <section class="row">
     <article>
-        <mat-list *ngFor="let idea of ideas">
-            <mat-list-item> {{ idea }} </mat-list-item>
-        </mat-list>
+        <ul *ngFor="let idea of ideas" class="list">
+            <li> {{ idea }} </li>
+        </ul>
     </article>
     <aside>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3zGtuvU3yw61IN8o2jPc1m?utm_source=generator&theme=0" width="100%" height="700" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3zGtuvU3yw61IN8o2jPc1m?utm_source=generator&theme=0" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </aside>
 </section>
 

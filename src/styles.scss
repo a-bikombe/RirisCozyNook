@@ -23,3 +23,22 @@ h2 {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    background-color: $yellow;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: $black;
+    padding: 20px;
+    width: 40%;
+}

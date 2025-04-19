@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
 
 @Component({
     selector: 'cozy-corner',
-    imports: [CommonModule, MatListModule],
+    imports: [CommonModule],
     templateUrl: './cozy-corner.component.html',
     styleUrl: './cozy-corner.component.scss'
 })

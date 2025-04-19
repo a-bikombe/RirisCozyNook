@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
 
 @Component({
     selector: 'dreams',
-    imports: [CommonModule, MatListModule],
+    imports: [CommonModule],
     templateUrl: './dreams.component.html',
     styleUrl: './dreams.component.scss'
 })

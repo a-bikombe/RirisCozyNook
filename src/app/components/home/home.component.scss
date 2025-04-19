@@ -1,0 +1,17 @@
+@use "../../../assets/variables" as *;
+
+:host {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.personality {
+    background-color: $pink;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: $black;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    width: 60%;
+}

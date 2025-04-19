@@ -59,5 +59,6 @@ main {
   color: #FCFCFC;
   width: 100%;
   padding: 5px 0;
+  position: fixed;
   text-align: center;
 }/*# sourceMappingURL=app.component.css.map */
