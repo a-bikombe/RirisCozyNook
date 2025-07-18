@@ -21,22 +21,10 @@
             "group": "build"
         },
         {
-            "label": "Start Storybook",
-            "type": "shell",
-            "command": "ng run frontend:storybook",
-            "options": {
-                "cwd": "${workspaceFolder}/frontend"
-            },
-            "problemMatcher": [],
-            "isBackground": true,
-            "group": "build"
-        },
-        {
             "label": "Run App",
             "dependsOn": [
                 "Start Backend",
-                "Start Frontend",
-                "Start Storybook"
+                "Start Frontend"
             ],
             "dependsOrder": "parallel"
         }
