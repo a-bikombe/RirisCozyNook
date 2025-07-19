@@ -1,0 +1,16 @@
+<h2>Crew List</h2>
+<p *ngIf="crew.length === 0">No crew data yet.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Relationship</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody> @for (member of crew; track member.name) { <tr>
+            <td>{{ member.name }}</td>
+            <td>{{ member.relationship }}</td>
+            <td>{{ member.description }}</td>
+        </tr> } </tbody>
+</table>

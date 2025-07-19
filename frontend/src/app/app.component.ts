@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { NavUrl } from './models/nav-url';
 
 @Component({
     selector: 'app-root',
@@ -9,5 +10,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 
 export class AppComponent {
-    title = 'Arianna\'s Cozy Nook'
+    title = "Riri's Cozy Nook";
+
+    navUrls: NavUrl[] = [
+        new NavUrl("/crew", "Crew"),
+        new NavUrl("/favorites", "Favorites"),
+        new NavUrl("/cozy-corner", "Cozy Corner"),
+        new NavUrl("/dreams", "Dreams")
+    ];
 }
