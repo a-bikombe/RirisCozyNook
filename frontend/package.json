@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "ng serve -o",
+        "start": "ng serve --open",
         "build": "npx ng build --configuration production",
         "watch": "ng build --watch --configuration development"
     },
