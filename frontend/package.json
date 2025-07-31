@@ -6,7 +6,7 @@
     "scripts": {
         "start": "ng serve --open",
         "build": "ng build",
-        "build-prod": "ng build --configuration production",
+        "build-prod": "npx ng build --configuration production",
         "watch": "ng build --watch --configuration development"
     },
     "keywords": [],
