@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "ng serve --open",
-        "build": "ng build",
-        "build-prod": "npx ng build --configuration production",
+        "build": "npx ng build --configuration production",
         "watch": "ng build --watch --configuration development"
     },
     "keywords": [],
