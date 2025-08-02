@@ -3,8 +3,8 @@
 <p>Hi, I'm Arianna. I like music, cozy games, and finding joy in little things.</p>
 
 <div class="card row personality">
-    <ul *ngFor="let type of personality" class="list">
-        <li> {{ type }} </li>
+    <ul class="list">
+        <li *ngFor="let type of personality"> {{ type }} </li>
     </ul>
 </div>
 

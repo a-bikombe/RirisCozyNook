@@ -5,12 +5,16 @@
         <tr>
             <th>Name</th>
             <th>Relationship</th>
-            <th>Desciption</th>
+            <th>Description</th>
         </tr>
     </thead>
-    <tbody> @for (member of crew; track member.name) { <tr>
-            <td>{{ member.name }}</td>
-            <td>{{ member.relationship }}</td>
-            <td>{{ member.description }}</td>
-        </tr> } </tbody>
+    <tbody>
+        @for (member of crew; track member.name) {
+            <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.relationship }}</td>
+                <td>{{ member.description }}</td>
+            </tr>
+        }
+    </tbody>
 </table>
