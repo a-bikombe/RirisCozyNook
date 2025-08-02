@@ -1,0 +1,11 @@
+{
+    "jestrunner.jestCommand": "npm run test --",
+    "jestrunner.debugOptions": {
+        "runtimeExecutable": "node",
+        "runtimeArgs": [
+            "--inspect-brk",
+            "./node_modules/jest/bin/jest.js",
+            "--runInBand"
+        ]
+    }
+}

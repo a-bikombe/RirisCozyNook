@@ -2,31 +2,15 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start Backend",
-            "type": "shell",
-            "command": "node backend/index.js",
-            "problemMatcher": [],
-            "isBackground": true,
-            "group": "build"
-        },
-        {
-            "label": "Start Frontend",
+            "label": "Start App",
             "type": "shell",
             "command": "npm start",
             "options": {
-                "cwd": "${workspaceFolder}/frontend"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [],
             "isBackground": true,
             "group": "build"
-        },
-        {
-            "label": "Run App",
-            "dependsOn": [
-                "Start Backend",
-                "Start Frontend"
-            ],
-            "dependsOrder": "parallel"
         }
     ]
 }
