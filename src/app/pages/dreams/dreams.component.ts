@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'dreams',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './dreams.component.html',
     styleUrl: './dreams.component.scss'

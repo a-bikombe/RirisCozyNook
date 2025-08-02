@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-crew',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './crew.component.html',
     styleUrl: './crew.component.scss'

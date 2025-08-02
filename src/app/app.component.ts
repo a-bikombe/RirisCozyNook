@@ -4,6 +4,7 @@ import { NavUrl } from './models/nav-url';
 
 @Component({
     selector: 'app-root',
+    standalone: true,
     imports: [RouterOutlet, RouterLink],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'

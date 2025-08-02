@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'cozy-corner',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './cozy-corner.component.html',
     styleUrl: './cozy-corner.component.scss'

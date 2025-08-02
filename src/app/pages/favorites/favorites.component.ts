@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'favorites',
+    standalone: true,
     imports: [CommonModule],
     templateUrl: './favorites.component.html',
     styleUrl: './favorites.component.scss'
@@ -19,7 +20,7 @@ export class FavoritesComponent {
     ]
 
     /*
-    
+
     Favorites
 Color: baby blue / purple
 Animal: whale shark, whales, sharks
@@ -75,6 +76,6 @@ french toast
 toast
 garlic bread
 
-    
+
     */
 }
