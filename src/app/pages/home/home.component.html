@@ -1,0 +1,22 @@
+<header class="flex">
+    <h2>
+        {{ header }} <br />
+        {{ name }}
+    </h2>
+    <img src="images/arianna.png" alt="" class="home-img" />
+</header>
+
+<main>
+    <h3>{{ mainTitle }}</h3>
+    <section class="row featured-sections">
+        <button class="card clickable featured" routerLink="/about-me">About Me</button>
+        <section class="row cozy-corner-favorites">
+            <button class="card clickable featured" routerLink="/cozy-corner">
+                Cozy Corner
+            </button>
+            <button class="card clickable featured" routerLink="/favorites">
+                Favorites
+            </button>
+        </section>
+    </section>
+</main>

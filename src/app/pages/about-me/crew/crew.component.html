@@ -1,0 +1,39 @@
+<h3 class="flex center">Meet My Crew</h3>
+
+@if (crew.length === 0) {
+    <section class="flex center error">
+        <p>No crew data yet.</p>
+    </section>
+}
+
+@if (crew.length !== 0) {
+    <section class="flex center">
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Relationship</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (member of crew; track member.name) {
+                    <tr>
+                        <td>
+                            <img
+                                src="images/{{
+                                    member.image
+                                }}.png"
+                                alt=""
+                            />
+                        </td>
+                        <td>{{ member.name }}</td>
+                        <td>{{ member.relationship }}</td>
+                        <td>{{ member.description }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+}

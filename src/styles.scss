@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./variables" as *;
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+  font-weight: 500;
+  margin: 0;
+}
+
+body,
+h3,
+h4,
+h5,
+h6,
+a,
+table,
+footer,
+button,
+li {
+  font-family: $body-font;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1 a,
+h2 {
+  color: $pink-dark;
+  font-family: $header-font;
+  text-align: center;
+  text-shadow: 1px 1px 2px $purple;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+button:hover {
+  cursor: pointer;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  &.list {
+    gap: 2rem;
+  }
+}
+
+.card {
+  background-color: $yellow;
+  color: $black;
+  margin: 1rem;
+  padding: 1rem;
+  width: 40%;
+  border-radius: 0.75rem;
+  box-shadow: $shadow;
+
+  &.clickable {
+    border: none;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: $yellow-dark;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdedef;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2bfc5;
+  border-radius: 10px;
+  border: 3px solid #fdf6f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f3a5ad;
+}
