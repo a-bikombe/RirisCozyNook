@@ -5,8 +5,8 @@ import { CozyCornerComponent } from './pages/cozy-corner/cozy-corner.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about-me', component: AboutMeComponent },
-  { path: 'favorites', component: FavoritesComponent },
-  { path: 'cozy-corner', component: CozyCornerComponent },
+    { path: '', component: HomeComponent },
+    { path: 'about-me', component: AboutMeComponent },
+    { path: 'favorites', component: FavoritesComponent },
+    { path: 'cozy-corner', component: CozyCornerComponent },
 ];
