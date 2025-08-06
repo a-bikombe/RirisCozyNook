@@ -4,11 +4,11 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
-        "watch": "ng build --watch --configuration development",
+        "preview": "vercel dev",
         "test": "playwright test --ui",
         "unit-test": "ng test",
-        "deploy": "vercel dev"
+        "build": "ng build",
+        "watch": "ng build --watch --configuration development"
     },
     "private": true,
     "dependencies": {
