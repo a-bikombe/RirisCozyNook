@@ -31,6 +31,12 @@ export class CrewComponent implements OnInit {
             relationship: 'Best Friend',
             description: 'Graciously listens to me yap about celebrities',
         },
+        {
+            image: 'rachel',
+            name: 'Rachel',
+            relationship: 'Chaos Coordinator',
+            description: 'Encourages my bad ideas and roots for the downfall of fictional men',
+        },
     ];
     // newMember: CrewMember = { image: '', name: '', relationship: '', description: '' };
 
