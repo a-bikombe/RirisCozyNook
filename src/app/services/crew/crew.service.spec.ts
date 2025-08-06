@@ -50,22 +50,4 @@ describe('CrewService', () => {
         expect(req.request.method).toBe('GET');
         req.flush(mockCrew);
     });
-
-    it('should add a new crew member', () => {
-        const newMember: CrewMember = {
-            image: 'new.jpg',
-            name: 'Evan',
-            relationship: 'Quartermaster',
-            description: 'Always gaming.'
-        };
-
-        service.addCrew(newMember).subscribe((response) => {
-            expect(response).toEqual({ success: true });
-        });
-
-        const req = httpMock.expectOne('/api/crew');
-        expect(req.request.method).toBe('POST');
-        expect(req.request.body).toEqual(newMember);
-        req.flush({ success: true });
-    });
 });

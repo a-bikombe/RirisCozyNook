@@ -27,8 +27,7 @@ header {
     max-width: 40rem;
     max-height: 40rem;
     width: 90%;
-    height: 80%;
-    font-family: "Segoe UI", sans-serif;
+    height: 90%;
     background: #fff8f6;
     color: #3b2f2f;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -60,8 +59,7 @@ header {
         background: none;
         border: none;
         font-size: 1.2rem;
-        cursor: pointer;
-        color: #888;
+        color: $black;
     }
 
     .fun-facts {

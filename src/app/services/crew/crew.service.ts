@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+// import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 
@@ -42,13 +42,13 @@ export class CrewService {
             image: 'lilly',
             name: 'Lillyann',
             relationship: 'Concert Buddy',
-            description: '',
+            description: 'My ride or die since middle school',
         },
         {
             image: 'sandy',
             name: 'Sandy',
             relationship: 'Karaoke Master',
-            description: '',
+            description: 'The best gift giver',
         },
     ];
 
