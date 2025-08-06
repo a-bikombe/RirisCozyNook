@@ -40,8 +40,8 @@ header {
     width: 90%;
     height: 90%;
     background: #fff8f6;
-    color: #3b2f2f;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: $black;
+    box-shadow: $shadow;
 
     &::backdrop {
         background: rgba(0, 0, 0, 0.5);
@@ -90,12 +90,7 @@ header {
         h4 {
             margin-top: 0;
             font-size: 1.8rem;
-            color: #d77a61;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            color: $pink-dark;
         }
     }
 }
@@ -133,10 +128,23 @@ header {
         align-items: center;
         flex-direction: column;
         width: 100%;
+        gap: 0;
 
         button {
             width: 80%;
         }
     }
 
+    .dialog {
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        max-width: 75%;
+        max-height: 75%;
+
+        .dialog-content {
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
