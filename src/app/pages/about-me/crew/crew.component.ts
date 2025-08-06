@@ -9,56 +9,17 @@ import { CommonModule } from '@angular/common';
     styleUrl: './crew.component.scss'
 })
 export class CrewComponent implements OnInit {
-    title: string = "Here's My Crew!";
+    title: string = "Meet My Crew";
     hasError: boolean = false;
     isLoading: boolean = true;
-    crew: CrewMember[] = [
-        {
-            image: 'evan',
-            name: 'Evan',
-            relationship: 'Boyfriend',
-            description: 'Loves wrestling and dealing with Milo’s antics',
-        },
-        {
-            image: 'mo',
-            name: 'Milo',
-            relationship: 'Bunny',
-            description: 'Attacks everyone at any opportunity',
-        },
-        {
-            image: 'abby',
-            name: 'Abby',
-            relationship: 'Best Friend',
-            description: 'Graciously listens to me yap about celebrities',
-        },
-        {
-            image: 'rachel',
-            name: 'Rachel',
-            relationship: 'Chaos Coordinator',
-            description: 'Encourages my bad ideas and roots for the downfall of fictional men',
-        },
-        {
-            image: 'lilly',
-            name: 'Lillyann',
-            relationship: 'Concert Buddy',
-            description: '',
-        },
-        {
-            image: 'sandy',
-            name: 'Sandy',
-            relationship: 'Karaoke Master',
-            description: '',
-        },
-    ];
-    // newMember: CrewMember = { image: '', name: '', relationship: '', description: '' };
+    crew: CrewMember[] = [];
 
     constructor(private crewService: CrewService) { }
 
     ngOnInit() {
-        // this.loadCrew();
+        this.loadCrew();
     }
 
-    /*
     loadCrew() {
         this.crewService.getCrew().subscribe({
             next: (data) => {
@@ -72,5 +33,5 @@ export class CrewComponent implements OnInit {
             }
         });
     }
-    */
+
 }

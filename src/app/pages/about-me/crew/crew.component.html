@@ -1,4 +1,4 @@
-<h3 class="flex center">Meet My Crew</h3>
+<h3 class="flex center">{{ title }}</h3>
 
 @if (crew.length === 0) {
     <section class="flex center error">
@@ -21,12 +21,7 @@
                 @for (member of crew; track member.name) {
                     <tr>
                         <td>
-                            <img
-                                src="images/{{
-                                    member.image
-                                }}.png"
-                                alt=""
-                            />
+                            <img src="images/{{ member.image }}.png" alt="" />
                         </td>
                         <td>{{ member.name }}</td>
                         <td>{{ member.relationship }}</td>
