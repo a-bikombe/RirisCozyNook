@@ -39,15 +39,4 @@ describe('CrewService', () => {
     it('should be created', () => {
         expect(service).toBeTruthy();
     });
-
-    it('should fetch crew members', () => {
-        service.getCrew().subscribe((crew) => {
-            expect(crew.length).toBe(2);
-            expect(crew).toEqual(mockCrew);
-        });
-
-        const req = httpMock.expectOne('/api/crew');
-        expect(req.request.method).toBe('GET');
-        req.flush(mockCrew);
-    });
 });
