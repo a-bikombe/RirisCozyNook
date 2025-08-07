@@ -1,59 +1,140 @@
-# RirisCozyNook
+# Riri's Cozy Nook 🪷✨
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.2.
+A cozy-core full-stack web app built with Angular, Node.js (Vercel Serverless), and a splash of baddie energy. You're stepping into a nook of vibes, visuals, and very cute components.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🛠 Tech Stack
+
+- **Frontend:** Angular 17+, TypeScript, SCSS
+- **Backend:** Node.js API routes (via Vercel Serverless)
+- **Database:** Neon (Postgres, hosted)
+- **E2E Testing:** Playwright
+- **Unit Testing:** Jasmine + Karma
+- **Deployment:** Vercel
+- **Styling:** Custom SCSS with pastel + cozy themes
+- **Dev Tools:** Prettier, .editorconfig
+
+---
+
+## 📁 File Structure
+
+```plaintext
+RirisCozyNook/
+├── api/                      # Serverless API functions
+│   └── crew.js               # Example endpoint: GET crew data
+├── e2e/                      # Playwright end-to-end tests
+│   ├── app.spec.ts
+│   └── pages/
+├── public/images/           # Character image assets
+│   ├── evan.png
+│   ├── mo.png
+│   └── ...
+├── src/                     # Angular app source
+│   ├── app/
+│   │   ├── models/          # TypeScript interfaces
+│   │   ├── pages/
+│   │   │   ├── about-me/
+│   │   │   │   ├── crew/    # Nested component
+│   │   │   └── cozy-corner/
+│   │   ├── app.routes.ts    # Route definitions
+│   │   └── ...
+│   ├── styles.scss
+│   ├── _variables.scss
+│   └── main.ts
+├── .vercel/                 # Vercel deployment config
+├── .env.development.local   # Local environment variables
+├── angular.json             # Angular config
+├── package.json             # Dependencies + scripts
+├── playwright.config.ts     # E2E test setup
+└── README.md                # You're here!
+```
+
+---
+
+## 🚀 Getting Started
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Dev Server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Go to `http://localhost:4200` to view the app.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧪 Running Tests
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Unit Tests (Jasmine + Karma)
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### E2E Tests (Playwright)
 
 ```bash
-ng e2e
+npx playwright test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+You can also run specific tests from `e2e/app.spec.ts` or use custom page objects in `e2e/pages`.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🌐 API Routes
+
+Deployed via Vercel’s serverless functions in the `/api` folder. Example:
+
+```bash
+GET /api/crew
+```
+
+Returns JSON data of your crew members.
+
+---
+
+## ✨ Custom Styling
+
+All styles are written in SCSS with cozy-core variables in `_variables.scss`.
+
+---
+
+## 🧼 Code Style
+
+This repo uses:
+
+- `.editorconfig` for consistent spacing
+- `.prettierrc` for linting and formatting
+
+Use:
+
+```bash
+npx prettier --write .
+```
+
+---
+
+## 🧭 Roadmap Ideas (Optional)
+
+- Add favorites page with local storage or DB-backed state
+- Integrate bunny fact API for daily fluff
+- Storybook setup for isolated UI testing
+- Clerk/Auth0 login if you ever want personalization
+
+---
+
+## 🌸 Live Preview
+
+Hosted on **Vercel**  
+🪩 <https://riris-cozy-nook.vercel.app> _(Replace with your actual link)_
+
+---
+
+## 🖤 Made with love (and TypeScript) by Arianna
