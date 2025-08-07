@@ -10,7 +10,7 @@ A cozy-core full-stack web app built with Angular, Node.js (Vercel Serverless), 
 - **Backend:** Node.js API routes (via Vercel Serverless)
 - **Database:** Neon (Postgres, hosted)
 - **E2E Testing:** Playwright
-- **Unit Testing:** Jasmine + Karma
+- **Unit Testing:** Jasmine and Karma
 - **Deployment:** Vercel
 - **Styling:** Custom SCSS with pastel + cozy themes
 - **Dev Tools:** Prettier, .editorconfig
