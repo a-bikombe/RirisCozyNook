@@ -6,3 +6,7 @@ export class Movie {
         public isFavorite: boolean = false
     ) { }
 }
+
+export const movies: Movie[] = [
+    new Movie("Spider-Man: Far From Home", 2019, "spiderman_ffh.jpg", true)
+];

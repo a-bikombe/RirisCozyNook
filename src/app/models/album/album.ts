@@ -8,3 +8,5 @@ export class Album implements Music {
         public isFavorite: boolean = false
     ) { }
 }
+
+
