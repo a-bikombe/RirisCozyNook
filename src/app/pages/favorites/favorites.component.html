@@ -3,6 +3,23 @@
 <header class="flex center">
     <section class="flex row center hall-of-fame">
         <section class="flex center column card">
+            <h3>Song</h3>
+
+            @if (favoriteSong) {
+                <img src="images/covers/albums/{{ favoriteSong.cover }}" alt="{{ favoriteSong.title }}"/>
+                <h4>{{ favoriteSong.title }}</h4>
+                <h5>By {{ favoriteSong.artist }}</h5>
+            }
+        </section>
+        <section class="flex center column card">
+            <h3>Album</h3>
+            @if (favoriteAlbum) {
+                <img src="images/covers/albums/{{ favoriteAlbum.cover }}" alt="{{ favoriteAlbum.title }}"/>
+                <h4>{{ favoriteAlbum.title }}</h4>
+                <h5>By {{ favoriteAlbum.artist }}</h5>
+            }
+        </section>
+        <section class="flex center column card">
             <h3>Movie</h3>
 
             @if (favoriteMovie) {
@@ -25,24 +42,6 @@
                 <img src="images/covers/games/{{ favoriteVideoGame.cover }}" alt="{{ favoriteVideoGame.title }}"/>
                 <h4>{{ favoriteVideoGame.title }}</h4>
                 <h5>{{ favoriteVideoGame.platform }}</h5>
-            }
-        </section>
-        <section class="flex center column card">
-            <h3>Album</h3>
-
-            @if (favoriteAlbum) {
-                <img src="images/covers/albums/{{ favoriteAlbum.cover }}" alt="{{ favoriteAlbum.title }}"/>
-                <h4>{{ favoriteAlbum.title }}</h4>
-                <h5>By {{ favoriteAlbum.artist }}</h5>
-            }
-        </section>
-        <section class="flex center column card">
-            <h3>Song</h3>
-
-            @if (favoriteSong) {
-                <img src="images/covers/albums/{{ favoriteSong.cover }}" alt="{{ favoriteSong.title }}"/>
-                <h4>{{ favoriteSong.title }}</h4>
-                <h5>By {{ favoriteSong.artist }}</h5>
             }
         </section>
     </section>
