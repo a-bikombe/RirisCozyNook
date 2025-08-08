@@ -49,6 +49,6 @@ describe('HomeComponent', () => {
     it('should have a profile image with correct class', () => {
         const img = compiled.querySelector('img.home-img');
         expect(img).toBeTruthy();
-        expect(img?.getAttribute('src')).toBe('images/arianna.png');
+        expect(img?.getAttribute('src')).toBe('images/characters/arianna.png');
     });
 });

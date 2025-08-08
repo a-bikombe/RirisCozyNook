@@ -17,7 +17,7 @@ describe('SkillsHobbiesService', () => {
         service.getSkillsHobbies().subscribe((items) => {
             expect(Array.isArray(items)).toBeTrue();
             expect(items.length).toBeGreaterThan(0);
-            expect(typeof items[0]).toBe('SkillHobby');
+            expect(typeof items[0]).toBe('string');
             done();
         });
     });

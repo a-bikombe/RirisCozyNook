@@ -46,7 +46,7 @@ describe('CrewComponent', () => {
         expect(tableRows.length).toBe(6);
 
         const cells = tableRows[0].querySelectorAll('td');
-        expect(cells[0].querySelector('img')?.getAttribute('src')).toContain('images/evan.png');
+        expect(cells[0].querySelector('img')?.getAttribute('src')).toContain('images/characters/evan.png');
         expect(cells[1].textContent).toContain('Evan');
         expect(cells[2].textContent).toContain('Boyfriend');
         expect(cells[3].textContent).toContain('Loves wrestling');

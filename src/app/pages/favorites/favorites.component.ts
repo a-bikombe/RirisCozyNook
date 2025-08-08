@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Song } from '../../models/music/song/song';
-import { Album } from '../../models/music/album/album';
+import { Song } from '../../models/song/song';
+import { Album } from '../../models/album/album';
 
 @Component({
     selector: 'favorites',
@@ -33,15 +33,17 @@ export class FavoritesComponent {
         "garlic bread"
     ];
     songs: Song[] = [
-        new Song("Humility", "Gorillaz"),
-        new Song("Sunflower, Vol. 6", "Harry Styles"),
-        new Song("Blu", "Jon Bellion"),
-        new Song("Fine Line", "Harry Styles"),
-        new Song("Telepathy", "BTS")
-    ];
+        new Song("Humility", "Gorillaz", "gorillaz_the_now_now.jpg", true),
+        new Song("Sunflower, Vol. 6", "Harry Styles", "harry_styles_fine_line.png"),
+        new Song("Blu", "Jon Bellion", "jon_bellion_glory_sound_prep.png"),
+        new Song("Fine Line", "Harry Styles", "harry_styles_fine_line.png"),
+        new Song("Telepathy", "BTS", "bts_be.png")
+    ];  // <img src="images/covers/albums/{{ song.cover }}.png" alt="" />
     albums: Album[] = [
-        new Album("Fine Line", "Harry Styles")
-    ];
+        new Album("Fine Line", "Harry Styles", "harry_styles_fine_line.png", true),
+        new Album("Demon Days", "Gorillaz", "gorillaz_demon_days.png"),
+        new Album("DECIDE", "Djo", "djo_decide.png")
+    ];  // <img src="images/covers/albums/{{ album.cover }}.png" alt="" />
     artists: string[] = [
         "Harry Styles",
         "Gorillaz",

@@ -17,7 +17,7 @@ describe('FunFactsService', () => {
         service.getFunFacts().subscribe((facts) => {
             expect(Array.isArray(facts)).toBeTrue();
             expect(facts.length).toBeGreaterThan(0);
-            expect(typeof facts[0]).toBe('FunFact');
+            expect(typeof facts[0]).toBe('string');
             done();
         });
     });

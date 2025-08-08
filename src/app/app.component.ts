@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NavigationItem } from './models/navigation-item/navigation-item';
+import { NavigationItem } from './interfaces/navigation-item.interface';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -17,8 +17,8 @@ export class AppComponent {
     currentDate: Date = new Date();
 
     navigationItems: NavigationItem[] = [
-        new NavigationItem("/about-me", "About Me"),
-        new NavigationItem("/favorites", "Favorites"),
-        new NavigationItem("/cozy-corner", "Cozy Corner"),
+        { path: "/about-me", label: "About Me"},
+        { path: "/favorites", label: "Favorites" },
+        { path: "/cozy-corner", label: "Cozy Corner" }
     ];
 }

@@ -4,8 +4,6 @@ import { AboutMeComponent } from './about-me.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { Component } from '@angular/core';
-import { FunFact } from '../../models/fun-fact/fun-fact';
-import { SkillHobby } from '../../models/skill-hobby/skill-hobby';
 
 @Component({
     selector: 'app-crew',
@@ -37,7 +35,7 @@ describe('AboutMeComponent', () => {
     it('should render header image and intro text', () => {
         const img = compiled.querySelector('header img');
         const h2 = compiled.querySelector('header h2');
-        expect(img?.getAttribute('src')).toBe('images/arianna_about_me.png');
+        expect(img?.getAttribute('src')).toBe('images/characters/arianna_about_me.png');
         expect(h2?.textContent).toContain('I like music');
     });
 
@@ -67,7 +65,7 @@ describe('AboutMeComponent', () => {
     });
 
     it('should render fun facts when present', () => {
-        component.funFacts = [new FunFact('I love bunnies'), new FunFact('I collect cute stationery')];
+        component.funFacts = ['I love bunnies', 'I collect cute stationery'];
         fixture.detectChanges();
 
         const funFactItems = compiled.querySelectorAll('dialog ul.list li');
@@ -77,7 +75,7 @@ describe('AboutMeComponent', () => {
     });
 
     it('should render skills and hobbies when present', () => {
-        component.skillsHobbies = [new SkillHobby('Coding'), new SkillHobby('Baking'), new SkillHobby('Writing')];
+        component.skillsHobbies = ['Coding', 'Baking', 'Writing'];
         fixture.detectChanges();
 
         const skillsDialog = compiled.querySelectorAll('dialog')[1];
