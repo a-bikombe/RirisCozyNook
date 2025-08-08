@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { CrewComponent } from './crew/crew.component';
 import { FunFactsService } from '../../services/fun-facts/fun-facts.service';
 import { SkillsHobbiesService } from '../../services/skills-hobbies/skills-hobbies.service';
+import { FunFact } from '../../models/fun-fact/fun-fact';
+import { SkillHobby } from '../../models/skill-hobby/skill-hobby';
 
 @Component({
     selector: 'app-about-me',
@@ -20,8 +22,8 @@ export class AboutMeComponent implements OnInit {
 
     hasError: boolean = false;
     isLoading: boolean = true;
-    funFacts: string[] = [];
-    skillsHobbies: string[] = [];
+    funFacts: FunFact[] = [];
+    skillsHobbies: SkillHobby[] = [];
     personality: string[] = [
         "MBTI: ISFJ-T",
         "6w5; sp",

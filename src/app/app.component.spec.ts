@@ -38,10 +38,10 @@ describe('AppComponent', () => {
 
     it('should render all navigation links', () => {
         const navLinks = compiled.querySelectorAll('nav a');
-        expect(navLinks.length).toBe(component.navUrls.length);
+        expect(navLinks.length).toBe(component.navigationItems.length);
 
         navLinks.forEach((link, index) => {
-            expect(link.textContent?.trim()).toBe(component.navUrls[index].label);
+            expect(link.textContent?.trim()).toBe(component.navigationItems[index].label);
         });
     });
 

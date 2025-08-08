@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NavUrl } from './models/nav-url';
+import { NavigationItem } from './models/navigation-item/navigation-item';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -16,9 +16,9 @@ export class AppComponent {
     footerText: string = "Copyright " + this.title + " —";
     currentDate: Date = new Date();
 
-    navUrls: NavUrl[] = [
-        new NavUrl("/about-me", "About Me"),
-        new NavUrl("/favorites", "Favorites"),
-        new NavUrl("/cozy-corner", "Cozy Corner"),
+    navigationItems: NavigationItem[] = [
+        new NavigationItem("/about-me", "About Me"),
+        new NavigationItem("/favorites", "Favorites"),
+        new NavigationItem("/cozy-corner", "Cozy Corner"),
     ];
 }
