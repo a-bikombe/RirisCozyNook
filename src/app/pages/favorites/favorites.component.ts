@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 
 export class FavoritesComponent {
     title: string = 'Favorites';
+    color
 
     /*
 
