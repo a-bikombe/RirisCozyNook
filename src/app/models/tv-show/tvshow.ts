@@ -1,9 +1,8 @@
-import { Music } from "../../interfaces/music.interface";
-
-export class Album implements Music {
+export class TVShow {
     constructor(
         public title: string,
-        public artist: string,
+        public startYear: number,
+        public endYear: number,
         public cover: string,
         public isFavorite: boolean = false
     ) { }

@@ -1,5 +1,22 @@
-:host {
+h3 {
+    margin-top: 0;
+}
+
+img {
+    border-radius: 0.5rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+h5 {
+    margin-top: 0;
+}
+
+.hall-of-fame {
+    margin-inline: 5rem;
+}
+
+.card {
     align-items: center;
-    display: flex;
-    flex-direction: column;
 }

@@ -1,9 +1,7 @@
-import { Music } from "../../interfaces/music.interface";
-
-export class Album implements Music {
+export class VideoGame {
     constructor(
         public title: string,
-        public artist: string,
+        public platform: string,
         public cover: string,
         public isFavorite: boolean = false
     ) { }

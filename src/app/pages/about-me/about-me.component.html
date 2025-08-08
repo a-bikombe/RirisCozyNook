@@ -1,13 +1,13 @@
-<header class="flex">
+<header class="flex row">
     <img src="images/characters/arianna_about_me.png" alt="" />
     <h2>
         I like music, cozy <br />games, and finding joy <br />in little things.
     </h2>
 </header>
 
-<main class="flex center personality">
-    <section class="flex center card">
-        <ul class="row list">
+<main class="flex row center personality">
+    <section class="flex row center card">
+        <ul class="flex row list personality-list">
             @for (type of personality; track type) {
                 <li>{{ type }}</li>
             }
@@ -17,7 +17,7 @@
 
 <app-crew></app-crew>
 
-<section class="flex dialog-buttons">
+<section class="flex row dialog-buttons">
     <button class="card clickable" (click)="openDialog('funFacts')">Fun Facts</button>
     <button class="card clickable" (click)="openDialog('skillsHobbies')">My Skills and Hobbies</button>
 </section>

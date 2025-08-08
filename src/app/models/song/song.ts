@@ -5,6 +5,6 @@ export class Song implements Music {
 		public title: string,
 		public artist: string,
         public cover: string,
-        public favorite: boolean = false
+        public isFavorite: boolean = false
 	) { }
 }

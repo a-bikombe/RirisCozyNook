@@ -2,10 +2,15 @@
 
 .flex {
     display: flex;
+    flex-direction: column;
 }
 
 .row {
     flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .center {
@@ -69,15 +74,6 @@ button:hover {
 .list {
     list-style-type: none;
     padding: 0;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-
-    &.list {
-        gap: 2rem;
-    }
 }
 
 .card {
