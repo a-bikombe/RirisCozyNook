@@ -10,14 +10,7 @@ import { Component } from '@angular/core';
 })
 
 export class FavoritesComponent {
-    header: string = 'Favorites';
-
-    ideas: string[] = [
-        "Games you've loved",
-        "Movies you rewatch",
-        "Music that makes you feel something",
-        "Anything you want to recommend"
-    ]
+    title: string = 'Favorites';
 
     /*
 
