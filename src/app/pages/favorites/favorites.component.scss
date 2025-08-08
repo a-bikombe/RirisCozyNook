@@ -20,3 +20,14 @@ h5 {
 .card {
     align-items: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .hall-of-fame {
+        flex-direction: column;
+        margin-inline: 1rem;
+
+        .card {
+            width: 80%;
+        }
+    }
+}
