@@ -30,6 +30,7 @@ RirisCozyNook/
 │   ├── evan.png
 │   ├── mo.png
 │   └── ...
+├── public/gifs/           # Character image assets
 ├── src/                     # Angular app source
 │   ├── app/
 │   │   ├── models/          # TypeScript interfaces
