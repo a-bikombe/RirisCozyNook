@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Song } from '../../models/music/song/song';
+import { Album } from '../../models/music/album/album';
 
 @Component({
     selector: 'favorites',
@@ -11,65 +13,56 @@ import { Component } from '@angular/core';
 
 export class FavoritesComponent {
     title: string = 'Favorites';
-    color
-
-    /*
-
-    Favorites
-Color: baby blue / purple
-Animal: whale shark, whales, sharks
-Hobbies: watch movies, listen to music, journal
-Food: pizza, fries, popcorn
-
-Snacks:
-Trolli eggs
-Peach rings
-Kitkats
-classic Lays
-kettle corn smartfood
-movie theater butter smartfood
-Pirate's Booty
-Funyuns
-Cape Cod chips
-fruit punch arizona
-minute maid watermelon punch
-Flavor of ice cream: salted caramel, cotton candy, brownie
-
-Songs:
-Gorillaz — Humility
-Harry Styles — Sunflower, Vol. 6
-Jon Bellion — Blu
-Harry Styles — Fine Line
-BTS — Telepathy
-
-Album: Fine Line by Harry Styles
-
-Artists:
-Harry Styles
-Gorillaz
-Wallows
-Djo
-TXT
-
-Food I'll Eat:
-pizza
-fries
-burgers (just patty, with cheese)
-no veggie burgers
-alfredo sauce
-seafood
-fish
-clam strips
-shrimp
-grilled cheese
-dumplings
-pancakes
-waffles
-bagels
-french toast
-toast
-garlic bread
-
-
-    */
+    colors: string[] = ["baby blue", "purple"];
+    animals: string[] = ["whale sharks", "whales", "sharks"];
+    food: string[] = [
+        "pizza",
+        "fries",
+        "popcorn",
+        "burgers (just patty, with cheese)",
+        "fish",
+        "clam strips",
+        "shrimp",
+        "grilled cheese",
+        "dumplings",
+        "pancakes",
+        "waffles",
+        "bagels",
+        "french toast",
+        "toast",
+        "garlic bread"
+    ];
+    songs: Song[] = [
+        new Song("Humility", "Gorillaz"),
+        new Song("Sunflower, Vol. 6", "Harry Styles"),
+        new Song("Blu", "Jon Bellion"),
+        new Song("Fine Line", "Harry Styles"),
+        new Song("Telepathy", "BTS")
+    ];
+    albums: Album[] = [
+        new Album("Fine Line", "Harry Styles")
+    ];
+    artists: string[] = [
+        "Harry Styles",
+        "Gorillaz",
+        "Wallows",
+        "Djo",
+        "TXT"
+    ];
+    snacks: string[] = [
+        "Trolli eggs",
+        "Peach rings",
+        "Kitkats",
+        "classic Lays",
+        "kettle corn smartfood",
+        "movie theater butter smartfood",
+        "Pirate's Booty",
+        "Funyuns",
+        "Cape Cod chips",
+        "fruit punch arizona",
+        "minute maid watermelon punch",
+        "salted caramel ice cream",
+        "cotton candy ice cream",
+        "brownie ice cream"
+    ];
 }
