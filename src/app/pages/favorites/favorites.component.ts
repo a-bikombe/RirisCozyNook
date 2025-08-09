@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { Song, songs } from '../../models/song/song';
+import { Component } from '@angular/core';
+import { Song } from '../../models/song/song';
 import { Album } from '../../models/album/album';
-import { Movie, movies } from '../../models/movie/movie';
-import { TVShow, tvShows } from '../../models/tv-show/tv-show';
-import { VideoGame, videoGames } from '../../models/video-game/video-game';
-import { albums, colors, animals, foods, artists, snacks } from './favorites.constants';
+import { Movie } from '../../models/movie/movie';
+import { TVShow } from '../../models/tv-show/tv-show';
+import { VideoGame } from '../../models/video-game/video-game';
+import { songs, albums, movies, tvShows, videoGames, colors, animals, foods, artists, snacks } from './favorites.constants';
 
 @Component({
     selector: 'favorites',
@@ -15,31 +15,18 @@ import { albums, colors, animals, foods, artists, snacks } from './favorites.con
     styleUrl: './favorites.component.scss'
 })
 
-export class FavoritesComponent implements OnInit {
+export class FavoritesComponent {
     title: string = 'Favorites';
+
+    songs: Song[] = songs;
+    albums: Album[] = albums;
     movies: Movie[] = movies;
     tvShows: TVShow[] = tvShows;
     videoGames: VideoGame[] = videoGames;
-    songs: Song[] = songs;
-    albums: Album[] = albums;
 
     colors: string[] = colors;
     animals: string[] = animals;
     foods: string[] = foods;
     artists: string[] = artists;
     snacks: string[] = snacks;
-
-    favoriteMovie: Movie | undefined;
-    favoriteTVShow: TVShow | undefined;
-    favoriteVideoGame: VideoGame | undefined;
-    favoriteSong: Song | undefined;
-    favoriteAlbum: Album | undefined;
-
-    ngOnInit() {
-        this.favoriteMovie = this.movies.find(movie => movie.isFavorite);
-        this.favoriteTVShow = this.tvShows.find(tvShow => tvShow.isFavorite);
-        this.favoriteVideoGame = this.videoGames.find(videoGame => videoGame.isFavorite);
-        this.favoriteSong = this.songs.find(song => song.isFavorite);
-        this.favoriteAlbum = this.albums.find(album => album.isFavorite);
-    }
 }

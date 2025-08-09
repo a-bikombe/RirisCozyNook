@@ -1,3 +1,20 @@
+@use "../../../variables" as *;
+
+.list {
+    counter-reset: myCounter 1;
+    margin: 0;
+
+    li {
+        line-height: 2rem;
+
+        &::before {
+            counter-increment: myCounter;
+            /* Increments 'myCounter' by 1 */
+            content: counter(myCounter) ". ";
+        }
+    }
+}
+
 h3 {
     margin-top: 0;
 }
@@ -14,11 +31,31 @@ h5 {
 }
 
 .hall-of-fame {
+    align-items: start;
     margin-inline: 5rem;
 }
 
 .card {
     align-items: center;
+
+    &-blank {
+        background-color: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-shadow: none;
+        text-align: left;
+        align-items: center;
+
+        & * {
+            width: auto;
+        }
+
+        & & {
+            margin: 0 1rem 1rem 1rem;
+            padding: 0 1rem 1rem 1rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {

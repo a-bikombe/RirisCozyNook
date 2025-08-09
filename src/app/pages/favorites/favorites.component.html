@@ -2,47 +2,109 @@
 
 <header class="flex center">
     <section class="flex row center hall-of-fame">
-        <section class="flex center column card">
-            <h3>Song</h3>
-
-            @if (favoriteSong) {
-                <img src="images/covers/albums/{{ favoriteSong.cover }}" alt="{{ favoriteSong.title }}"/>
-                <h4>{{ favoriteSong.title }}</h4>
-                <h5>By {{ favoriteSong.artist }}</h5>
-            }
+        <section class="flex center column card-blank">
+            <section class="flex center column card">
+                <h3>Song</h3>
+                @if (songs.length > 0) {
+                    <img
+                        src="images/covers/albums/{{ songs[0].cover }}"
+                        alt="{{ songs[0].title }} cover"
+                    />
+                    <h4>{{ songs[0].title }}</h4>
+                    <h5>By {{ songs[0].artist }}</h5>
+                }
+            </section>
+            <section class="flex center column card-blank">
+                <ol class="list">
+                    @for (song of songs.slice(1); track song) {
+                        <li>{{ song.title }} by {{ song.artist }}</li>
+                    }
+                </ol>
+            </section>
         </section>
-        <section class="flex center column card">
-            <h3>Album</h3>
-            @if (favoriteAlbum) {
-                <img src="images/covers/albums/{{ favoriteAlbum.cover }}" alt="{{ favoriteAlbum.title }}"/>
-                <h4>{{ favoriteAlbum.title }}</h4>
-                <h5>By {{ favoriteAlbum.artist }}</h5>
-            }
+        <section class="flex center column card-blank">
+            <section class="flex center column card">
+                <h3>Album</h3>
+                @if (albums.length > 0) {
+                    <img
+                        src="images/covers/albums/{{ albums[0].cover }}"
+                        alt="{{ albums[0].title }} cover"
+                    />
+                    <h4>{{ albums[0].title }}</h4>
+                    <h5>By {{ albums[0].artist }}</h5>
+                }
+            </section>
+            <section class="flex center column card-blank">
+                <ol class="list">
+                    @for (album of albums.slice(1); track album) {
+                        <li>{{ album.title }} by {{ album.artist }}</li>
+                    }
+                </ol>
+            </section>
         </section>
-        <section class="flex center column card">
-            <h3>Movie</h3>
+        <section class="flex center column card-blank">
+            <section class="flex center column card">
+                <h3>Movie</h3>
+                @if (movies.length > 0) {
+                    <img
+                        src="images/covers/movies-tv/{{ movies[0].cover }}"
+                        alt="{{ movies[0].title }} cover"
+                    />
+                    <h4>{{ movies[0].title }}</h4>
+                    <h5>{{ movies[0].year }}</h5>
+                }
+            </section>
+            <section class="flex center column card-blank">
+                <ol class="list">
+                    @for (movie of movies.slice(1); track movie) {
+                        <li>{{ movie.title }} ({{ movie.year }})</li>
+                    }
+                </ol>
+            </section>
+        </section>
+        <section class="flex center column card-blank">
+            <section class="flex center column card">
+                <h3>TV Show</h3>
+                @if (tvShows.length > 0) {
+                    <img
+                        src="images/covers/movies-tv/{{ tvShows[0].cover }}"
+                        alt="{{ tvShows[0].title }} cover"
+                    />
+                    <h4>{{ tvShows[0].title }}</h4>
+                    <h5>
+                        {{ tvShows[0].startYear }} -
+                        {{ tvShows[0].endYear }}
+                    </h5>
+                }
+            </section>
+            <section class="flex center column card-blank">
+                <ol class="list">
+                    @for (tvShow of tvShows.slice(1); track tvShow) {
+                        <li>{{ tvShow.title }} ({{ tvShows[0].startYear }}-{{ tvShows[0].endYear }})</li>
+                    }
+                </ol>
+            </section>
+        </section>
+        <section class="flex center column card-blank">
+            <section class="flex center column card">
+                <h3>Game</h3>
 
-            @if (favoriteMovie) {
-                <img src="images/covers/movies-tv/{{ favoriteMovie.cover }}" alt="{{ favoriteMovie.title }}"/>
-                <h4>{{ favoriteMovie.title }}</h4>
-                <h5>{{ favoriteMovie.year }}</h5>
-            }
-        </section><section class="flex center column card">
-            <h3>TV Show</h3>
-
-            @if (favoriteTVShow) {
-                <img src="images/covers/movies-tv/{{ favoriteTVShow.cover }}" alt="{{ favoriteTVShow.title }}"/>
-                <h4>{{ favoriteTVShow.title }}</h4>
-                <h5>{{ favoriteTVShow.startYear }} - {{ favoriteTVShow.endYear }}</h5>
-            }
-        </section><section class="flex center column card">
-            <h3>Game</h3>
-
-            @if (favoriteVideoGame) {
-                <img src="images/covers/games/{{ favoriteVideoGame.cover }}" alt="{{ favoriteVideoGame.title }}"/>
-                <h4>{{ favoriteVideoGame.title }}</h4>
-                <h5>{{ favoriteVideoGame.platform }}</h5>
-            }
+                @if (videoGames.length > 0) {
+                    <img
+                        src="images/covers/games/{{ videoGames[0].cover }}"
+                        alt="{{ videoGames[0].title }} cover"
+                    />
+                    <h4>{{ videoGames[0].title }}</h4>
+                    <h5>{{ videoGames[0].platform }}</h5>
+                }
+            </section>
+            <section class="flex center column card-blank">
+                <ol class="list">
+                    @for (videoGame of videoGames.slice(1); track videoGame) {
+                        <li>{{ videoGame.title }}</li>
+                    }
+                </ol>
+            </section>
         </section>
     </section>
 </header>
