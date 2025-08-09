@@ -1,9 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CrewComponent } from './crew/crew.component';
-import { funFacts } from '../../constants/about-me/fun-facts.constants';
-import { skillsHobbies } from '../../constants/about-me/skills-hobbies.constants';
-import { personality } from '../../constants/about-me/personality.constants';
+import { funFacts, skillsHobbies, personality } from './about-me.constants';
 
 @Component({
     selector: 'app-about-me',

@@ -5,12 +5,7 @@ import { Album } from '../../models/album/album';
 import { Movie, movies } from '../../models/movie/movie';
 import { TVShow, tvShows } from '../../models/tv-show/tv-show';
 import { VideoGame, videoGames } from '../../models/video-game/video-game';
-import { snacks } from '../../constants/favorites/snacks.constants';
-import { albums } from '../../constants/favorites/albums.constants';
-import { artists } from '../../constants/favorites/artists.constants';
-import { foods } from '../../constants/favorites/foods.constants';
-import { colors } from '../../constants/favorites/colors.constants';
-import { animals } from '../../constants/favorites/animals.constants';
+import { albums, colors, animals, foods, artists, snacks } from './favorites.constants';
 
 @Component({
     selector: 'favorites',
