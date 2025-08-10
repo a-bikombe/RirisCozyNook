@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { Song } from '../../models/song/song';
 import { Album } from '../../models/album/album';
 import { Movie } from '../../models/movie/movie';
@@ -16,6 +16,7 @@ import { songs, albums, movies, tvShows, videoGames, colors, animals, foods, art
 })
 
 export class FavoritesComponent {
+    @ViewChild('favoritesDialog') favoritesDialog!: ElementRef<HTMLDialogElement>;
     title: string = 'Favorites';
 
     songs: Song[] = songs;
@@ -29,4 +30,75 @@ export class FavoritesComponent {
     foods: string[] = foods;
     artists: string[] = artists;
     snacks: string[] = snacks;
+
+    dialogTitle: string = '';
+    dialogItems: string[] = [];
+
+    constructor(private renderer: Renderer2) { }
+
+    openDialog(title: string, items: string[]) {
+        this.dialogTitle = `My Favorite ${title}!`;
+        this.dialogItems = items;
+
+        let dialog = this.favoritesDialog.nativeElement;
+
+        switch (title) {
+            case 'Colors':
+                this.renderer.addClass(dialog, 'blue');
+                break;
+            case 'Animals':
+                this.renderer.addClass(dialog, 'pink');
+                break;
+            case 'Foods':
+                this.renderer.addClass(dialog, 'yellow');
+                break;
+            case 'Artists':
+                this.renderer.addClass(dialog, 'green');
+                break;
+            case 'Snacks':
+                this.renderer.addClass(dialog, 'purple');
+                break;
+            default:
+                break;
+        }
+
+        dialog.showModal();
+        this.renderer.addClass(dialog, 'opening');
+        setTimeout(() => this.renderer.removeClass(dialog, 'opening'), 300);
+        this.renderer.addClass(dialog, 'visible');
+    }
+
+    closeWithAnimation() {
+        let dialog = this.favoritesDialog.nativeElement;;
+
+        this.renderer.removeClass(dialog, 'visible');
+        this.renderer.addClass(dialog, 'closing');
+
+        setTimeout(() => {
+            this.renderer.removeClass(dialog, 'closing');
+            dialog.close();
+        }, 300);
+    }
+
+    onDialogClose() {
+        this.dialogTitle = '';
+        this.dialogItems = [];
+        let dialog = this.favoritesDialog.nativeElement;;
+
+        // Add closing class for animation if not already present
+        if (!dialog.classList.contains('closing')) {
+            this.renderer.addClass(dialog, 'closing');
+            setTimeout(() => {
+                this.renderer.removeClass(dialog, 'closing');
+            }, 300);
+        }
+
+        this.renderer.removeClass(dialog, 'visible');
+        this.renderer.removeClass(dialog, 'blue');
+        this.renderer.removeClass(dialog, 'pink');
+        this.renderer.removeClass(dialog, 'yellow');
+        this.renderer.removeClass(dialog, 'purple');
+        this.renderer.removeClass(dialog, 'green');
+    }
+
 }

@@ -1,11 +1,6 @@
-:host {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
 section {
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin-inline: 5rem;
 }
 
 article {

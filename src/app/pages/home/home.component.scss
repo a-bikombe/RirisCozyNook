@@ -34,7 +34,8 @@ a {
     text-decoration: none;
 
     .featured:hover {
-        background-color: $yellow-dark;
+        $l: $l - 10;
+        background-color: hsl($h, $s, $l);
     }
 }
 

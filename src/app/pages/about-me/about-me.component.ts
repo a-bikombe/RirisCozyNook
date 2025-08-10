@@ -14,8 +14,7 @@ import { funFacts, skillsHobbies, personality } from './about-me.constants';
     styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-    @ViewChild('funFactsDialog') funFactsDialog!: ElementRef<HTMLDialogElement>;
-    @ViewChild('skillsHobbiesDialog') skillsHobbiesDialog!: ElementRef<HTMLDialogElement>;
+    @ViewChild('aboutMeDialog') aboutMeDialog!: ElementRef<HTMLDialogElement>;
 
     hasError: boolean = false;
     isLoading: boolean = true;
@@ -23,14 +22,16 @@ export class AboutMeComponent {
     skillsHobbies: string[] = skillsHobbies;
     personality: string[] = personality;
 
+    dialogTitle: string = '';
+    dialogItems: string[] = [];
+
     constructor(private renderer: Renderer2) { }
 
-    openDialog(dialogToOpen: string) {
-        let dialog = this.funFactsDialog.nativeElement;;
+    openDialog(title: string, items: string[]) {
+        this.dialogTitle = `My ${title}!`;
+        this.dialogItems = items;
 
-        if (dialogToOpen == 'skillsHobbies') {
-            dialog = this.skillsHobbiesDialog.nativeElement;
-        }
+        let dialog = this.aboutMeDialog.nativeElement;
 
         dialog.showModal();
         this.renderer.addClass(dialog, 'opening');
@@ -38,30 +39,8 @@ export class AboutMeComponent {
         this.renderer.addClass(dialog, 'visible');
     }
 
-    onDialogClose(closingDialog: string) {
-        let dialog = this.funFactsDialog.nativeElement;;
-
-        if (closingDialog == 'skillsHobbies') {
-            dialog = this.skillsHobbiesDialog.nativeElement;
-        }
-
-        // Add closing class for animation if not already present
-        if (!dialog.classList.contains('closing')) {
-            this.renderer.addClass(dialog, 'closing');
-            setTimeout(() => {
-                this.renderer.removeClass(dialog, 'closing');
-            }, 300);
-        }
-
-        this.renderer.removeClass(dialog, 'visible');
-    }
-
-    closeWithAnimation(dialogToClose: string) {
-        let dialog = this.funFactsDialog.nativeElement;;
-
-        if (dialogToClose == 'skillsHobbies') {
-            dialog = this.skillsHobbiesDialog.nativeElement;
-        }
+    closeWithAnimation() {
+        let dialog = this.aboutMeDialog.nativeElement;;
 
         this.renderer.removeClass(dialog, 'visible');
         this.renderer.addClass(dialog, 'closing');
@@ -70,5 +49,19 @@ export class AboutMeComponent {
             this.renderer.removeClass(dialog, 'closing');
             dialog.close();
         }, 300);
+    }
+
+    onDialogClose() {
+        this.dialogTitle = '';
+        this.dialogItems = [];
+        let dialog = this.aboutMeDialog.nativeElement;;
+
+        // Add closing class for animation if not already present
+        if (!dialog.classList.contains('closing')) {
+            this.renderer.addClass(dialog, 'closing');
+            setTimeout(() => {
+                this.renderer.removeClass(dialog, 'closing');
+            }, 300);
+        }
     }
 }

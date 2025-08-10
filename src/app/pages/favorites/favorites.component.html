@@ -80,7 +80,11 @@
             <section class="flex center column card-blank">
                 <ol class="list">
                     @for (tvShow of tvShows.slice(1); track tvShow) {
-                        <li>{{ tvShow.title }} ({{ tvShows[0].startYear }}-{{ tvShows[0].endYear }})</li>
+                        <li>
+                            {{ tvShow.title }} ({{ tvShows[0].startYear }}-{{
+                                tvShows[0].endYear
+                            }})
+                        </li>
                     }
                 </ol>
             </section>
@@ -108,3 +112,80 @@
         </section>
     </section>
 </header>
+
+<main>
+    <section class="flex row center dialog-buttons">
+        <button
+            class="flex center column card clickable card-secondary blue"
+            (click)="openDialog('Colors', colors)"
+        >
+            <h3>Colors</h3>
+            <ul class="list">
+                @for (color of colors.slice(0, 3); track color) {
+                    <li>{{ color }}</li>
+                }
+            </ul>
+        </button>
+        <button
+            class="flex center column card clickable card-secondary pink"
+            (click)="openDialog('Animals', animals)"
+        >
+            <h3>Animals</h3>
+            <ul class="list">
+                @for (animal of animals.slice(0, 3); track animal) {
+                    <li>{{ animal }}</li>
+                }
+            </ul>
+        </button>
+        <button
+            class="flex center column card clickable card-secondary"
+            (click)="openDialog('Foods', foods)"
+        >
+            <h3>Foods</h3>
+            <ul class="list">
+                @for (food of foods.slice(0, 3); track food) {
+                    <li>{{ food }}</li>
+                }
+            </ul>
+        </button>
+        <button
+            class="flex center column card clickable card-secondary purple"
+            (click)="openDialog('Snacks', snacks)"
+        >
+            <h3>Snacks</h3>
+            <ul class="list">
+                @for (snack of snacks.slice(0, 3); track snack) {
+                    <li>{{ snack }}</li>
+                }
+            </ul>
+        </button>
+        <button
+            class="flex center column card clickable card-secondary green"
+            (click)="openDialog('Artists', artists)"
+        >
+            <h3>Musical Artists</h3>
+            <ul class="list">
+                @for (artist of artists.slice(0, 3); track artist) {
+                    <li>{{ artist }}</li>
+                }
+            </ul>
+        </button>
+    </section>
+</main>
+
+<dialog #favoritesDialog class="dialog" (close)="onDialogClose()">
+    <form>
+        <button type="button" class="close-btn" (click)="closeWithAnimation()">
+            ✖
+        </button>
+    </form>
+
+    <section class="dialog-content">
+        <h4>{{ dialogTitle }}</h4>
+        <ul class="list">
+            @for (item of dialogItems; track item) {
+                <li>{{ item }}</li>
+            }
+        </ul>
+    </section>
+</dialog>

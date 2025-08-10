@@ -10,6 +10,6 @@ export const routes: Routes = [
     { path: '404', component: PageNotFoundComponent },
     { path: 'about-me', component: AboutMeComponent },
     { path: 'favorites', component: FavoritesComponent },
-    { path: 'cozy-corner', /* component: CozyCornerComponent,  */redirectTo: '/404' },
+    { path: 'cozy-corner', component: CozyCornerComponent },
     { path: '**', component: PageNotFoundComponent },
 ];

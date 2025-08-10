@@ -18,38 +18,29 @@
 <app-crew></app-crew>
 
 <section class="flex row dialog-buttons">
-    <button class="card clickable" (click)="openDialog('funFacts')">Fun Facts</button>
-    <button class="card clickable" (click)="openDialog('skillsHobbies')">My Skills and Hobbies</button>
+    <button class="card clickable" (click)="openDialog('Fun Facts', funFacts)">
+        Fun Facts
+    </button>
+    <button
+        class="card clickable"
+        (click)="openDialog('Skills and Hobbies', skillsHobbies)"
+    >
+        My Skills and Hobbies
+    </button>
 </section>
 
-
-<dialog #funFactsDialog class="dialog" (close)="onDialogClose('funFacts')">
+<dialog #aboutMeDialog class="dialog" (close)="onDialogClose()">
     <form>
-        <button type="button" class="close-btn" (click)="closeWithAnimation('funFacts')">✖</button>
+        <button type="button" class="close-btn" (click)="closeWithAnimation()">
+            ✖
+        </button>
     </form>
 
     <section class="dialog-content">
-        <h4>Fun Facts About Me!</h4>
+        <h4>{{ dialogTitle }}</h4>
         <ul class="list">
-            @for (fact of funFacts; track fact) {
-                <li>{{ fact }}</li>
-                <br>
-            }
-        </ul>
-    </section>
-</dialog>
-
-<dialog #skillsHobbiesDialog class="dialog" (close)="onDialogClose('skillsHobbies')">
-    <form>
-        <button type="button" class="close-btn" (click)="closeWithAnimation('skillsHobbies')">✖</button>
-    </form>
-
-    <section class="dialog-content">
-        <h4>My Skills and Hobbies!</h4>
-        <ul class="list">
-            @for (skillHobby of skillsHobbies; track skillHobby) {
-                <li>{{ skillHobby }}</li>
-                <br>
+            @for (item of dialogItems; track item) {
+                <li>{{ item }}</li>
             }
         </ul>
     </section>

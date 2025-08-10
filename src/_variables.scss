@@ -1,15 +1,14 @@
 // Colors
 $white: #FCFCFC;
 $black: #7A7A7A;    // readable but gentle text, especially body
-$yellow: #FFE5B4;   // hover effects or subtle section dividers
-$yellow-dark: #ffd280;
-$green: #C7F2E3;    // indicators or success messages
+$yellow: hsl(39, 100%, 85%);   // hover effects or subtle section dividers
+$yellow-dark: hsl(39, 100%, 75%);
+$green: hsl(159, 62%, 86%);    // indicators or success messages
 $blue: #CFE8FF;     // links, borders, or tooltip backgrounds
 $blue-dark: #66b5ff;
-$purple: #D9D4E7;   // overall background or card containers
-$purple-dark: #b7add1;
+$purple: hsl(255, 27%, 80%);   // overall background or card containers
 $pink-light: #fdedef;
-$pink: #FADADD;     // action buttons, selected tags, or highlights
+$pink: hsl(354, 76%, 92%);     // action buttons, selected tags, or highlights
 $pink-med: #f2bfc5;
 $pink-dark: #f3a5ad;
 
@@ -17,3 +16,8 @@ $pink-dark: #f3a5ad;
 $header-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 $body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+$card-color: $yellow;
+$h: 39;
+$s: 100%;
+$l: 85%;
