@@ -3,10 +3,10 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "vercel dev -d",
+        "start": "vercel dev",
         "start:local": "ng serve",
-        "test": "playwright test --ui",
-        "test:unit": "ng test",
+        "test": "ng test",
+        "e2e": "playwright test --ui",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "deploy": "vercel --prod"

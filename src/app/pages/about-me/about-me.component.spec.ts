@@ -4,6 +4,7 @@ import { AboutMeComponent } from './about-me.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { Component } from '@angular/core';
+import { funFacts, skillsHobbies } from './about-me.constants';
 
 @Component({
     selector: 'app-crew',
@@ -50,36 +51,25 @@ describe('AboutMeComponent', () => {
         expect(items[2].textContent).toBe('Curious');
     });
 
-    it('should show fun facts dialog when openDialog is called', () => {
-        const funDialog = compiled.querySelector('dialog.dialog') as HTMLDialogElement;
-        spyOn(funDialog, 'showModal');
-        component.openDialog('funFacts');
-        expect(funDialog.showModal).toHaveBeenCalled();
-    });
-
-    it('should show skills and hobbies dialog when openDialog is called', () => {
-        const skillsDialog = compiled.querySelectorAll('dialog.dialog')[1] as HTMLDialogElement;
-        spyOn(skillsDialog, 'showModal');
-        component.openDialog('skillsHobbies');
-        expect(skillsDialog.showModal).toHaveBeenCalled();
-    });
-
-    it('should render fun facts when present', () => {
-        component.funFacts = ['I love bunnies', 'I collect cute stationery'];
+    it('should show fun facts dialog and render fun facts when openDialog is called', () => {
+        component.openDialog('Fun Facts', ['I love bunnies', 'I collect cute stationery']);
         fixture.detectChanges();
-
-        const funFactItems = compiled.querySelectorAll('dialog ul.list li');
-        expect(funFactItems.length).toBeGreaterThanOrEqual(2);
+        const dialog = compiled.querySelector('dialog.dialog') as HTMLDialogElement;
+        expect(dialog).toBeTruthy();
+        expect(component.dialogTitle).toContain('Fun Facts');
+        const funFactItems = dialog.querySelectorAll('ul.list li');
+        expect(funFactItems.length).toBe(2);
         expect(funFactItems[0].textContent).toContain('I love bunnies');
         expect(funFactItems[1].textContent).toContain('I collect cute stationery');
     });
 
-    it('should render skills and hobbies when present', () => {
-        component.skillsHobbies = ['Coding', 'Baking', 'Writing'];
+    it('should show skills and hobbies dialog and render skills and hobbies when openDialog is called', () => {
+        component.openDialog('Skills and Hobbies', ['Coding', 'Baking', 'Writing']);
         fixture.detectChanges();
-
-        const skillsDialog = compiled.querySelectorAll('dialog')[1];
-        const skillsItems = skillsDialog.querySelectorAll('ul.list li');
+        const dialog = compiled.querySelector('dialog.dialog') as HTMLDialogElement;
+        expect(dialog).toBeTruthy();
+        expect(component.dialogTitle).toContain('Skills and Hobbies');
+        const skillsItems = dialog.querySelectorAll('ul.list li');
         expect(skillsItems.length).toBe(3);
         expect(skillsItems[0].textContent).toContain('Coding');
         expect(skillsItems[1].textContent).toContain('Baking');
