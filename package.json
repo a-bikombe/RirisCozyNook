@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "vercel dev",
+        "start": "vercel dev -d",
         "start:local": "ng serve",
         "test": "playwright test --ui",
         "test:unit": "ng test",
@@ -38,6 +38,7 @@
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
         "prettier": "^3.6.2",
-        "typescript": "~5.7.2"
+        "typescript": "~5.7.2",
+        "vercel": "^45.0.9"
     }
 }
