@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 
 export class CozyCornerComponent {
-    header: string = 'Cozy Corner';
+    header: string = 'Welcome to the Cozy Corner!';
 
     ideas: string[] = [
         "A journal or notes area",
