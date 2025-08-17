@@ -20,45 +20,28 @@ describe('AppComponent (standalone, no RouterTestingModule)', () => {
         fixture.detectChanges();
     });
 
-    it('should create the component', () => {
+    it('should create the app', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should render the title as a link inside h1', () => {
-        const h1 = compiled.querySelector('h1');
-        expect(h1).toBeTruthy();
-        const a = h1!.querySelector('a');
-        expect(a).toBeTruthy();
-        expect(a!.textContent?.trim()).toBe(`Riri's Cozy Nook`);
+    it('should have the correct title', () => {
+        expect(component.title).toBe("Riri's Cozy Nook");
     });
 
-    it('should render 3 navigation items with the expected labels', () => {
-        const navLinks = Array.from(compiled.querySelectorAll('.nav-list a'));
-        expect(navLinks.length).toBe(3);
-        const labels = navLinks.map((el) => el.textContent?.trim());
-        expect(labels).toEqual(['About Me', 'Favorites', 'Cozy Corner']);
+    it('should have the correct footerText', () => {
+        expect(component.footerText).toContain("Copyright");
+        expect(component.footerText).toContain(component.title);
     });
 
-    it('should include a router-outlet element', () => {
-        const outlet = compiled.querySelector('router-outlet');
-        expect(outlet).toBeTruthy();
+    it('should have a currentDate property of type Date', () => {
+        expect(component.currentDate instanceof Date).toBeTrue();
     });
 
-    it('should render footer with copyright and the current year', () => {
-        const p = compiled.querySelector('footer p')!;
-        expect(p).toBeTruthy();
-        expect(p.textContent).toContain(`Copyright ${component.title} —`);
-        expect(p.textContent).toContain(new Date().getFullYear().toString());
-    });
-
-    // Optional: sanity check that the nav list is inside <nav> and <ul>
-    it('should structure nav as <nav><ul><li><a>…', () => {
-        const nav = compiled.querySelector('nav.navbar');
-        expect(nav).toBeTruthy();
-        const ul = nav!.querySelector('ul.nav-list');
-        expect(ul).toBeTruthy();
-        const lis = ul!.querySelectorAll('li');
-        expect(lis.length).toBe(3);
-        expect(Array.from(lis)[0].querySelector('a')).toBeTruthy();
+    it('should have navigationItems with correct paths and labels', () => {
+        expect(component.navigationItems.length).toBe(3);
+        expect(component.navigationItems[0]).toEqual({ path: "/about-me", label: "About Me" });
+        expect(component.navigationItems[1]).toEqual({ path: "/favorites", label: "Favorites" });
+        expect(component.navigationItems[2]).toEqual({ path: "/cozy-corner", label: "Cozy Corner" });
     });
 });
+

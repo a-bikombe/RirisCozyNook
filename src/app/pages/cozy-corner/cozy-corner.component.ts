@@ -11,11 +11,6 @@ import { Component } from '@angular/core';
 
 export class CozyCornerComponent {
     header: string = 'Welcome to the Cozy Corner!';
-
-    ideas: string[] = [
-        "A journal or notes area",
-        "Moodboards or vibes",
-        "Pics or drawings if you want",
-        "Maybe like “today I liked…” entries"
-    ]
+    placeholderParagraph: string = 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.Ad litora torquent per conubia nostra inceptos himenaeos.Lorem ipsum dolor sit amet consectetur adipiscing elit.Quisque faucibus ex sapien vitae pellentesque sem placerat.In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.Pulvinar vivamus fringilla lacus nec metus bibendum egestas.Iaculis massa nisl malesuada lacinia integer nunc posuere.Ut hendrerit semper vel class aptent taciti sociosqu.Ad litora torquent per conubia nostra inceptos himenaeos. Tempus leo eu aenean sed diam urna tempor.';
+    repeatCount: number = 3;
 }
