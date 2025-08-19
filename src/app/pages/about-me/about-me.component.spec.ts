@@ -26,10 +26,6 @@ describe('AboutMeComponent', () => {
         fixture.detectChanges();
     });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
-
     it('should initialize properties', () => {
         expect(component.hasError).toBeFalse();
         expect(component.isLoading).toBeTrue();

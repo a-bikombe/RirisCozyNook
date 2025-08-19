@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ActivatedRoute } from '@angular/router';
 
-describe('AppComponent (standalone, no RouterTestingModule)', () => {
+describe('AppComponent', () => {
     let fixture: any;
     let component: AppComponent;
     let compiled: HTMLElement;

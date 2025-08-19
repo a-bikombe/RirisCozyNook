@@ -1,16 +1,59 @@
-// Colors
+// Base Neutrals
 $white: #FCFCFC;
-$black: #7A7A7A;    // readable but gentle text, especially body
-$yellow: hsl(39, 100%, 85%);   // hover effects or subtle section dividers
+$black: #7A7A7A; // readable but gentle
+
+// 🌞 Yellow
+$yellow: hsl(39, 100%, 85%); // subtle hover
 $yellow-dark: hsl(39, 100%, 75%);
-$green: hsl(159, 62%, 86%);    // indicators or success messages
-$blue: #CFE8FF;     // links, borders, or tooltip backgrounds
+$gold: hsl(42, 90%, 60%); // sunny accent
+
+// 🧡 Orange
+$orange: hsl(24, 100%, 85%); // cozy, peachy background
+$orange-dark: hsl(24, 100%, 75%);
+$coral: hsl(16, 88%, 80%); // warm soft pop
+
+// ❤️ Red
+$red: hsl(0, 78%, 85%); // alerts, errors, hearts
+$red-dark: hsl(0, 68%, 72%);
+$rose: hsl(350, 80%, 88%); // warm romantic tint
+
+// 💚 Green
+$green: hsl(159, 62%, 86%); // success, calm
+$green-dark: hsl(159, 62%, 76%);
+$mint: hsl(145, 60%, 85%); // gentle success or accent
+
+// 💙 Blue
+$blue: #CFE8FF;
 $blue-dark: #66b5ff;
-$purple: hsl(255, 27%, 80%);   // overall background or card containers
+$blue-med: hsl(210, 100%, 80%); // info messages, links
+$sky: hsl(200, 100%, 90%); // tooltip background
+
+// 💜 Purple
+$purple: hsl(255, 27%, 80%);
+$lavender: hsl(270, 50%, 88%); // dreamy accents or background
+$violet: hsl(260, 40%, 70%);
+
+// 💕 Pink
 $pink-light: #fdedef;
-$pink: hsl(354, 76%, 92%);     // action buttons, selected tags, or highlights
+$pink: hsl(354, 76%, 92%);
 $pink-med: #f2bfc5;
 $pink-dark: #f3a5ad;
+$blush: hsl(340, 80%, 85%);
+
+// 🤎 Brown
+$brown-lightest: #f6f0eb; // background or card base
+$brown-beige: #e8d8cd; // cozy light
+$brown-blush: #d4b8a9; // warm brown-pink crossover
+$brown-soft: #bca190; // soft cocoa
+$brown-medium: #9f7e6c;
+$brown-warm: #815d4f; // deeper neutral
+$brown-dark: #5a3f36; // warm deep contrast
+$caramel: #d8a36e; // soft golden orange-brown
+$butterscotch: #e0a56d; // slightly sweeter
+$cinnamon-toast: #cc8355; // warm, toasted orange-brown
+$burnt-orange: #c46a33; // deeper orangey autumn-y
+$spiced-clay: #b76e50; // rich terra cotta brown-orange
+$pumpkin-brown: #b05f3c; // orange-forward but earthy
 
 // Fonts
 $header-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

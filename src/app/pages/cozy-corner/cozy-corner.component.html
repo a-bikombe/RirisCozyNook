@@ -7,19 +7,13 @@
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/3zGtuvU3yw61IN8o2jPc1m?utm_source=generator"
         width="100%"
-        height="100"
+        height="400"
         frameborder="0"
         allowfullscreen
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     ></iframe>
 </section>
 
-<section class="flex row">
-    <article>
-        @for (string of [].constructor(repeatCount); track string) {
-            <p>
-                {{ placeholderParagraph }}
-            </p>
-        }
-    </article>
+<section class="flex row bunny-facts">
+    <p> {{ randomBunnyFact }}</p>
 </section>
