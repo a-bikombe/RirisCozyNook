@@ -20,7 +20,7 @@ app.notFound((c) => c.json({ error: 'Not found' }, 404))
 
 // Tell Vercel to run this as a Node function
 export const config = {
-    runtime: 'nodejs18.x',      // (or 'nodejs20.x')
+    runtime: 'nodejs',      // (or 'nodejs20.x')
 }
 
 // Export a Vercel-compatible handler
