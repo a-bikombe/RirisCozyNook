@@ -44,3 +44,5 @@ Thumbs.db
 .env*
 *.jar
 Icon
+
+prisma/migrations/*.lock
