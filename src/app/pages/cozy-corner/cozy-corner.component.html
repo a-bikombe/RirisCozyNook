@@ -15,5 +15,7 @@
 </section>
 
 <section class="flex row bunny-facts">
-    <p> {{ randomBunnyFact }}</p>
+    @if (fact) {
+        <p> {{ fact.fact }}</p>
+    }
 </section>

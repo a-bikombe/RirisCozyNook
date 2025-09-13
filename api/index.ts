@@ -11,7 +11,7 @@ const app = new Hono()
 
 // middleware
 app.use('*', logger())
-app.use('*', cors())
+app.use('*', cors({ origin: ['http://localhost:4200', 'https://riris-cozy-nook.vercel.app'] }))
 app.use('*', prettyJSON())
 
 // routes

@@ -1,7 +1,7 @@
 
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
+import { Component, inject } from '@angular/core';
+import { BunnyFact, BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
 
 @Component({
     selector: 'cozy-corner',
@@ -12,13 +12,19 @@ import { BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
 })
 export class CozyCornerComponent {
     header = 'Welcome to the Cozy Corner!';
-    randomBunnyFact = '';
+    private api = inject(BunnyFactService);
+    fact?: BunnyFact;
+    facts: BunnyFact[] = [];
 
-    constructor(
-        private bunnyFactService: BunnyFactService
-    ) {
-        this.bunnyFactService.getRandomFact().subscribe(fact => {
-            this.randomBunnyFact = fact;
-        });
+    ngOnInit() {
+        this.loadRandom();
+    }
+
+    loadRandom() {
+        this.api.getRandom().subscribe(f => this.fact = f);
+    }
+
+    loadAll() {
+        this.api.getAll().subscribe(list => this.facts = list);
     }
 }

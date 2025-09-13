@@ -1,22 +1,39 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
-@Injectable({
-    providedIn: 'root'
-})
+export interface BunnyFact {
+    id: number;
+    fact: string;
+}
+
+type ListResponse = { facts: BunnyFact[] };
+type RandomResponse = { fact: BunnyFact };
+
+@Injectable({ providedIn: 'root' })
 export class BunnyFactService {
-    constructor(private http: HttpClient) {}
+    private http = inject(HttpClient);
+    private base = environment.apiBase;
 
-    getAllFacts(): Observable<string[]> {
-        return this.http.get<any>('/api/bunny-facts.js').pipe(
-            map(res => Array.isArray(res) ? res : res.bunnyFacts || [])
+    /** GET /bunny-facts */
+    getAll(): Observable<BunnyFact[]> {
+        return this.http.get<ListResponse>(`${this.base}/bunny-facts`).pipe(
+            map(res => res.facts),
+            catchError(err => this.handle(err))
         );
     }
 
-    getRandomFact(): Observable<string> {
-        return this.http.get<{ fact: string }>('/api/bunny-facts.js').pipe(
-            map(res => res.fact || '')
+    /** GET /bunny-facts/random */
+    getRandom(): Observable<BunnyFact> {
+        return this.http.get<RandomResponse>(`${this.base}/bunny-facts/random`).pipe(
+            map(res => res.fact),
+            catchError(err => this.handle(err))
         );
+    }
+
+    private handle(err: unknown) {
+        // surface a friendly error; extend as needed
+        return throwError(() => err);
     }
 }
