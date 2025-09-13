@@ -7,7 +7,9 @@
         "start:local": "ng serve",
         "test": "ng test",
         "e2e": "playwright test --ui",
-        "build": "ng build",
+        "postinstall": "prisma generate",
+        "dev": "tsx api/index.ts",
+        "build": "prisma generate && tsc",
         "watch": "ng build --watch --configuration development",
         "deploy": "vercel --prod"
     },
