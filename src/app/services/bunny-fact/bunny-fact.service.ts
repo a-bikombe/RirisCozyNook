@@ -26,10 +26,8 @@ export class BunnyFactService {
 
     /** GET /bunny-facts/random */
     getRandom(): Observable<BunnyFact> {
-        return this.http.get<RandomResponse>(`${this.base}/bunny-facts/random`).pipe(
-            map(res => res.fact),
-            catchError(err => this.handle(err))
-        );
+        return this.http.get<{ fact: BunnyFact }>(`${this.base}/bunny-facts/random`)
+            .pipe(map(r => r.fact))
     }
 
     private handle(err: unknown) {
