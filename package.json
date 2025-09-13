@@ -8,8 +8,9 @@
         "test": "ng test",
         "e2e": "playwright test --ui",
         "postinstall": "prisma generate",
+        "build:api": "tsc -p tsconfig.api.json",
+        "build": "prisma generate && npm run build:api && ng build",
         "dev": "tsx api/index.ts",
-        "build": "prisma generate && ng build",
         "watch": "ng build --watch --configuration development",
         "deploy": "vercel --prod"
     },
