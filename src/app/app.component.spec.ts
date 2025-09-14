@@ -44,4 +44,3 @@ describe('AppComponent', () => {
         expect(component.navigationItems[2]).toEqual({ path: "/cozy-corner", label: "Cozy Corner" });
     });
 });
-

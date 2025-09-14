@@ -1,0 +1,21 @@
+<header>
+    <h2>{{ header }}</h2>
+</header>
+
+<section>
+    <iframe
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/playlist/3zGtuvU3yw61IN8o2jPc1m?utm_source=generator"
+        width="100%"
+        height="400"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    ></iframe>
+</section>
+
+<section class="flex row bunny-facts">
+    @if (fact) {
+        <p> {{ fact.fact }}</p>
+    }
+</section>
