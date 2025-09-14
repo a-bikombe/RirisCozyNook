@@ -15,6 +15,7 @@
 </section>
 
 <section class="flex row bunny-facts">
+    @if (!fact) { <p>Loading fact...</p> }
     @if (fact) {
         <p> {{ fact.fact }}</p>
     }

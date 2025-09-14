@@ -1,6 +1,6 @@
 
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
 
 @Component({
@@ -10,12 +10,12 @@ import { BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
     templateUrl: './cozy-corner.component.html',
     styleUrl: './cozy-corner.component.scss'
 })
-export class CozyCornerComponent {
+export class CozyCornerComponent implements OnInit {
     header = 'Welcome to the Cozy Corner!';
     facts: any[] = [];
     fact: any;
 
-    constructor(private bunnyService: BunnyFactService) { }
+    constructor(private bunnyService: BunnyFactService) {}
 
     ngOnInit() {
         this.loadRandomFact();
