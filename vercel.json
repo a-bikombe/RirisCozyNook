@@ -1,6 +1,6 @@
 {
     "buildCommand": "ng build --configuration production",
-    "outputDirectory": "dist/browser/riris-cozy-nook",
+    "outputDirectory": "dist/riris-cozy-nook/browser",
     "rewrites": [
         {
             "source": "/api/(.*)",
