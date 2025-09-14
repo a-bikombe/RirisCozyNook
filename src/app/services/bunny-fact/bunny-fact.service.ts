@@ -12,7 +12,7 @@ export class BunnyFactService {
     constructor(private http: HttpClient) { }
 
     getAllFacts(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.apiUrl}/all`);
+        return this.http.get<any[]>(`${this.apiUrl}`);
     }
 
     getRandomFact(): Observable<any> {
