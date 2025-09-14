@@ -1,6 +1,14 @@
 {
     "buildCommand": "ng build --configuration production",
     "outputDirectory": "dist/riris-cozy-nook/browser",
+    "functions": {
+        "api/**/*.ts": {
+            "runtime": "edge"
+        },
+        "api/**/*.js": {
+            "runtime": "edge"
+        }
+    },
     "rewrites": [
         {
             "source": "/api/(.*)",
@@ -10,13 +18,5 @@
             "source": "/(.*)",
             "destination": "/"
         }
-    ],
-    "functions": {
-        "api/**/*.ts": {
-            "runtime": "edge"
-        },
-        "api/**/*.js": {
-            "runtime": "edge"
-        }
-    }
+    ]
 }
