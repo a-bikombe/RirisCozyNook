@@ -42,8 +42,8 @@ describe('CozyCornerComponent', () => {
         expect(bunnyFactServiceSpy.getRandomFact).toHaveBeenCalled();
     });
 
-    it('should set randomBunnyFact from the service', () => {
-        expect(component.randomBunnyFact).toBe('Bunnies are adorable!');
+    it('should set fact from the service', () => {
+        expect(component.fact).toBe('Bunnies are adorable!');
     });
 
     it('should render header in the template', () => {

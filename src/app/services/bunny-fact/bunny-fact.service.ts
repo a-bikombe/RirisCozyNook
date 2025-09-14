@@ -11,8 +11,8 @@ export class BunnyFactService {
 
     constructor(private http: HttpClient) { }
 
-    getFacts(): Observable<any[]> {
-        return this.http.get<any[]>(this.apiUrl);
+    getAllFacts(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.apiUrl}/all`);
     }
 
     getRandomFact(): Observable<any> {

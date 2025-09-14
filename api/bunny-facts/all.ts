@@ -3,10 +3,9 @@ import { sql } from "../_db.js";
 export async function GET() {
     try {
         const rows = await sql`
-            SELECT fact
+            SELECT id, fact
             FROM bunny_facts
-            ORDER BY RANDOM()
-            LIMIT 1
+            ORDER BY id
         `;
         if (rows.length === 0) {
             return new Response(JSON.stringify({ message: "No facts yet" }), { status: 404 });
