@@ -5,6 +5,7 @@
         "ng": "ng",
         "start": "vercel dev",
         "start:local": "ng serve",
+        "build": "ng build",
         "test": "ng test",
         "e2e": "playwright test --ui",
         "watch": "ng build --watch --configuration development",
