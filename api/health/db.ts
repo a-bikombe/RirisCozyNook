@@ -1,5 +1,5 @@
 import { sql } from "../_db";
-
+export const runtime = 'edge';
 export async function GET() {
     try {
         const now = await sql`select now()`;

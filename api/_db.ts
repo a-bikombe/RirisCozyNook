@@ -1,5 +1,5 @@
 import { neon, neonConfig } from "@neondatabase/serverless";
-
+export const runtime = 'edge';
 // tiny perf win on serverless
 neonConfig.fetchConnectionCache = true;
 
