@@ -1,7 +1,6 @@
 <header>
     <h2>{{ header }}</h2>
 </header>
-
 <section>
     <iframe
         style="border-radius: 12px"
@@ -12,10 +11,22 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
     ></iframe>
 </section>
-
 <section class="flex row bunny-facts">
-    @if (!fact) { <p>Loading fact...</p> }
+    @if (!fact) {
+        <p>Loading fact...</p>
+    }
     @if (fact) {
-        <p> {{ fact.fact }}</p>
+        <p>
+            <button
+                [cdkCopyToClipboard]="fact?.fact"
+                (cdkCopyToClipboardCopied)="onCopy($event)"
+            >
+                <img
+                    src="https://img.icons8.com/?size=100&id=86216&format=png&color=000000"
+                    alt=""
+                />
+            </button>
+            {{ fact.fact }}
+        </p>
     }
 </section>
