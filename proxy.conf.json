@@ -1,0 +1,8 @@
+{
+    "/api": {
+        "target": "https://riris-cozy-nook.vercel.app",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "info"
+    }
+}

@@ -1,14 +1,15 @@
 {
     "version": 2,
+    "devCommand": "ng serve --configuration development --port 3000",
     "buildCommand": "ng build --configuration production",
     "outputDirectory": "dist/riris-cozy-nook/browser",
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "/api/$1"
+            "destination": "https://riris-cozy-nook.vercel.app/api/$1"
         },
         {
-            "source": "/(.*)",
+            "source": "/((?!api).*)",
             "destination": "/"
         }
     ]
