@@ -7,11 +7,16 @@ section {
     &.bunny-facts {
         font-style: italic;
         color: $cinnamon-toast;
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .row {
         flex-direction: column;
+    }
+
+    section {
+        margin-inline: 2rem;
     }
 }
