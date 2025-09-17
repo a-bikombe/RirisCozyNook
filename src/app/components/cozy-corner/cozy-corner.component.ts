@@ -15,6 +15,9 @@ export class CozyCornerComponent implements OnInit {
     header = 'Welcome to the Cozy Corner!';
     facts: any[] = [];
     fact: any;
+    copied: boolean = false;
+
+
 
     constructor(private bunnyService: BunnyFactService, private clipboard: Clipboard) { }
 
@@ -29,6 +32,12 @@ export class CozyCornerComponent implements OnInit {
     }
 
     onCopy(success: boolean) {
-        console.log(success ? 'Text copied to clipboard!' : 'Copy failed.');
+        if (success) {
+            this.copied = true;
+        }
+    }
+
+    resetCopied() {
+        this.copied = false;
     }
 }
