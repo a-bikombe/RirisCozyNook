@@ -1,0 +1,11 @@
+<nav class="navbar">
+        <ul class="nav-list">
+            @for (navigationItem of navigationItems; track navigationItem.path) {
+                <li>
+                    <a [routerLink]="navigationItem.path" routerLinkActive="active">
+                        {{ navigationItem.label }}
+                    </a>
+                </li>
+            }
+        </ul>
+    </nav>

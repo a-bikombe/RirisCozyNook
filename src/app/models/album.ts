@@ -1,4 +1,4 @@
-import { Music } from "../interfaces/music.interface";
+import { Music } from "./music.interface";
 
 export class Album implements Music {
     constructor(

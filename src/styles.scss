@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@use "variables" as *;
 
 .flex {
     display: flex;
@@ -70,6 +70,11 @@ button {
     &:hover {
         cursor: pointer;
     }
+}
+
+a {
+    color: $white;
+    text-decoration: none;
 }
 
 .list {

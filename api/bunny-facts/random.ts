@@ -1,4 +1,4 @@
-import { sql } from "../_lib/db.js";
+import { sql } from "../db.js";
 
 export async function GET() {
     try {

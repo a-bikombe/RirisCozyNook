@@ -1,0 +1,37 @@
+.dots {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap, 8px);
+    /* inherit color by default */
+    color: inherit;
+}
+
+.dot {
+    width: var(--size, 10px);
+    height: var(--size, 10px);
+    border-radius: 50%;
+    background: var(--color, currentColor);
+    opacity: .35;
+    animation: pulse var(--dur, 700ms) ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(.6);
+        opacity: .35;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dot {
+        animation: none;
+        opacity: .6;
+    }
+}

@@ -1,8 +1,8 @@
-@use "../../../variables" as *;
+@use "variables" as *;
 
 section {
     justify-content: space-evenly;
-    margin-inline: 5rem;
+    margin-inline: 10rem;
 
     &.bunny-facts {
         font-style: italic;
@@ -11,13 +11,18 @@ section {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .row {
-        flex-direction: column;
-    }
+.iframe-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 
-    section {
-        margin-inline: 2rem;
+    .iframe-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
     }
 }
 
@@ -38,4 +43,14 @@ button {
 .copy-icon:hover {
     transform: scale(1.2);
     filter: brightness(0) saturate(200%) contrast(300%);
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+
+    section {
+        margin-inline: 2rem;
+    }
 }

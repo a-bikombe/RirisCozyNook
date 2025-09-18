@@ -2,17 +2,8 @@
     <h1>
         <a routerLink="/" routerLinkActive="active"> {{ title }} </a>
     </h1>
-    <nav class="navbar">
-        <ul class="nav-list">
-            @for (navigationItem of navigationItems; track navigationItem.path) {
-                <li>
-                    <a [routerLink]="navigationItem.path" routerLinkActive="active">
-                        {{ navigationItem.label }}
-                    </a>
-                </li>
-            }
-        </ul>
-    </nav>
+    <app-navbar></app-navbar>
+    
 </header>
 <main>
     <router-outlet />

@@ -1,4 +1,4 @@
-import { CrewMember } from "../../interfaces/crew.interface";
+import { CrewMember } from "../../models/crew.interface";
 
 export const personality: string[] = [
     "MBTI: ISFJ-T",

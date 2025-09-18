@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { VideoGame } from '../../models/video-game';
 import { songs, albums, movies, tvShows, videoGames, colors, animals, foods, artists, snacks } from './favorites.constants';
-import { Album } from '../../models/album';
-import { Movie } from '../../models/movie';
-import { Song } from '../../models/song';
-import { TVShow } from '../../models/tv-show';
+import { Album } from '@models/album';
+import { Movie } from '@models/movie';
+import { Song } from '@models/song';
+import { TVShow } from '@models/tv-show';
+import { VideoGame } from '@models/video-game';
 
 @Component({
     selector: 'favorites',

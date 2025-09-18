@@ -1,0 +1,22 @@
+.spinner {
+    width: var(--size, 40px);
+    height: var(--size, 40px);
+    border: calc(var(--size, 40px) / 8) solid #e0e0e0;
+    border-top-color: var(--color, currentColor);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    border-style: solid;
+    stroke-linecap: round;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation: none;
+    }
+}

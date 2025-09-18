@@ -1,0 +1,16 @@
+<div
+    class="dots"
+    role="status"
+    [attr.aria-label]="label"
+    aria-live="polite"
+    [style.--size.px]="size"
+    [style.--gap.px]="gap"
+    [style.--color]="color"
+    [style.--dur.ms]="durationMs"
+>
+    <span
+        class="dot"
+        *ngFor="let _ of dots; let i = index"
+        [style.animationDelay.ms]="i * delayMs"
+    ></span>
+</div>

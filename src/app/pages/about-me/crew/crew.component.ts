@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CrewMember } from '../../../interfaces/crew.interface';
+import { CrewMember } from '@models/crew.interface';
 import { crew } from '../about-me.constants';
 
 @Component({

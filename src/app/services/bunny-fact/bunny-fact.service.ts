@@ -1,21 +1,20 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { BunnyFact } from '@models/bunny-fact.interface';
 
 @Injectable({
     providedIn: 'root'
 })
 export class BunnyFactService {
     private apiUrl = `${environment.apiBase}/bunny-facts`;
+    private http = inject(HttpClient);
 
-    constructor(private http: HttpClient) { }
-
-    getAllFacts(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.apiUrl}`);
+    list() {
+        return this.http.get<BunnyFact[]>(this.apiUrl);
     }
 
-    getRandomFact(): Observable<any> {
-        return this.http.get<any>(`${this.apiUrl}/random`);
+    random() {
+        return this.http.get<BunnyFact>(`${this.apiUrl}/random`);
     }
 }

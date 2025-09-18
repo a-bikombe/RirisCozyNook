@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { of } from 'rxjs';
 import { CozyCornerComponent } from './cozy-corner.component';
 import { BunnyFactService } from '../../services/bunny-fact/bunny-fact.service';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
@@ -23,7 +22,6 @@ describe('CozyCornerComponent', () => {
         }).compileComponents();
 
         bunnyFactServiceSpy = TestBed.inject(BunnyFactService) as jasmine.SpyObj<BunnyFactService>;
-        bunnyFactServiceSpy.getRandomFact.and.returnValue(of('Bunnies are adorable!'));
 
         fixture = TestBed.createComponent(CozyCornerComponent);
         component = fixture.componentInstance;
@@ -36,10 +34,6 @@ describe('CozyCornerComponent', () => {
 
     it('should have the correct header', () => {
         expect(component.header).toBe('Welcome to the Cozy Corner!');
-    });
-
-    it('should call getRandomFact on BunnyFactService', () => {
-        expect(bunnyFactServiceSpy.getRandomFact).toHaveBeenCalled();
     });
 
     it('should set fact from the service', () => {

@@ -16,7 +16,22 @@
         "moduleResolution": "bundler",
         "importHelpers": true,
         "target": "ES2022",
-        "module": "ES2022"
+        "module": "ES2022",
+        "baseUrl": "src",
+        "paths": {
+            "@pages/*": [
+                "app/pages/*"
+            ],
+            "@components/*": [
+                "app/components/*"
+            ],
+            "@models/*": [
+                "app/models/*"
+            ],
+            "@services/*": [
+                "app/services/*"
+            ]
+        }
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
