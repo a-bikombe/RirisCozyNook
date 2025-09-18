@@ -16,13 +16,16 @@
                 />
             </button>
             @if (fact) {
-                <button (click)="toggleFavorite()">
-                    @if (favorited) {
-                        <app-favorite-icon-filled></app-favorite-icon-filled>
-                    }
-                    @if (!favorited) {
-                        <app-favorite-icon-outline></app-favorite-icon-outline>
-                    }
+                <button
+                    (click)="toggleFavorite()"
+                    [attr.aria-pressed]="favorited"
+                    aria-label="Toggle favorite"
+                >
+                    <app-favorite-icon
+                        [filled]="favorited"
+                        [size]="22"
+                        color="#e63946"
+                    ></app-favorite-icon>
                 </button>
             }
             {{ fact!.fact }}
@@ -37,9 +40,15 @@
                 <button
                     class="fav-btn"
                     (click)="favorites.unfavorite(favoritedFact.id); reload()"
-                    [attr.aria-pressed]="favorites.isFavorited(favoritedFact.id)"
+                    [attr.aria-pressed]="
+                        favorites.isFavorited(favoritedFact.id)
+                    "
                 >
-                    <app-favorite-icon-filled></app-favorite-icon-filled>
+                    <app-favorite-icon
+                        [filled]="true"
+                        [size]="22"
+                        color="#e63946"
+                    ></app-favorite-icon>
                 </button>
 
                 <span class="fact-text">{{ favoritedFact.fact }}</span>

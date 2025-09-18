@@ -1,8 +1,7 @@
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FavoriteIconFilledComponent } from '@components/favorite-icon-filled/favorite-icon-filled.component';
-import { FavoriteIconOutlineComponent } from '@components/favorite-icon-outline/favorite-icon-outline.component';
+import { FavoriteIconComponent } from '@components/favorite-icon/favorite-icon.component';
 import { LoaderDotComponent } from '@components/loader-dot/loader-dot.component';
 import { BunnyFact } from '@models/bunny-fact.interface';
 import { BunnyFactService } from '@services/bunny-fact/bunny-fact.service';
@@ -10,7 +9,7 @@ import { FavoritesService } from '@services/favorites/favorites.service';
 
 @Component({
     selector: 'app-bunny-facts',
-    imports: [CommonModule, ClipboardModule, LoaderDotComponent, FavoriteIconFilledComponent, FavoriteIconOutlineComponent],
+    imports: [CommonModule, ClipboardModule, LoaderDotComponent, FavoriteIconComponent],
     templateUrl: './bunny-facts.component.html',
     styleUrl: './bunny-facts.component.scss'
 })
