@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { songs, albums, movies, tvShows, videoGames, colors, animals, foods, artists, snacks } from './favorites.constants';
+import { songs, albums, movies, tvShows, videoGames, colors, animals, foods, artists, snacks } from '@constants/favorites.constants';
 import { Album } from '@models/album';
 import { Movie } from '@models/movie';
 import { Song } from '@models/song';
@@ -11,11 +11,11 @@ import { VideoGame } from '@models/video-game';
     selector: 'favorites',
     standalone: true,
     imports: [CommonModule],
-    templateUrl: './favorites.component.html',
-    styleUrl: './favorites.component.scss'
+    templateUrl: './favorites.page.html',
+    styleUrl: './favorites.page.scss'
 })
 
-export class FavoritesComponent {
+export class FavoritesPage {
     @ViewChild('favoritesDialog') favoritesDialog!: ElementRef<HTMLDialogElement>;
     title: string = 'Favorites';
 

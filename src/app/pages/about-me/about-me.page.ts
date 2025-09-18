@@ -1,7 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CrewComponent } from './crew/crew.component';
-import { funFacts, skillsHobbies, personality } from './about-me.constants';
+import { funFacts, skillsHobbies, personality } from '../../constants/about-me.constants';
+import { CrewComponent } from '@components/crew/crew.component';
 
 @Component({
     selector: 'app-about-me',
@@ -10,10 +10,10 @@ import { funFacts, skillsHobbies, personality } from './about-me.constants';
         CrewComponent,
         CommonModule
     ],
-    templateUrl: './about-me.component.html',
-    styleUrl: './about-me.component.scss'
+    templateUrl: './about-me.page.html',
+    styleUrl: './about-me.page.scss'
 })
-export class AboutMeComponent {
+export class AboutMePage {
     @ViewChild('aboutMeDialog') aboutMeDialog!: ElementRef<HTMLDialogElement>;
 
     hasError: boolean = false;

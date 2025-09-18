@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { AboutMeComponent } from './about-me.component';
-import { CrewComponent } from './crew/crew.component';
+import { AboutMePage } from './about-me.page';
 import { Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CrewComponent } from '@components/crew/crew.component';
 
-describe('AboutMeComponent', () => {
-    let component: AboutMeComponent;
-    let fixture: ComponentFixture<AboutMeComponent>;
+describe('AboutMePage', () => {
+    let component: AboutMePage;
+    let fixture: ComponentFixture<AboutMePage>;
     let renderer: Renderer2;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AboutMeComponent, CrewComponent, CommonModule]
+            imports: [AboutMePage, CrewComponent, CommonModule]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(AboutMeComponent);
+        fixture = TestBed.createComponent(AboutMePage);
         component = fixture.componentInstance;
         renderer = fixture.componentRef.injector.get(Renderer2);
 

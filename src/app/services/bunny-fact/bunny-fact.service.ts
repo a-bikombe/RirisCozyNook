@@ -10,7 +10,7 @@ export class BunnyFactService {
     private apiUrl = `${environment.apiBase}/bunny-facts`;
     private http = inject(HttpClient);
 
-    list() {
+    all() {
         return this.http.get<BunnyFact[]>(this.apiUrl);
     }
 

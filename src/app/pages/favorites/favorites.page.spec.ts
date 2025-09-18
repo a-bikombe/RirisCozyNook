@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { Renderer2 } from '@angular/core';
-import { FavoritesComponent } from './favorites.component';
+import { FavoritesPage } from './favorites.page';
 
-describe('FavoritesComponent', () => {
-    let component: FavoritesComponent;
-    let fixture: ComponentFixture<FavoritesComponent>;
+describe('FavoritesPage', () => {
+    let component: FavoritesPage;
+    let fixture: ComponentFixture<FavoritesPage>;
     let renderer: Renderer2;
 
     // Mock dialog element
@@ -12,10 +12,10 @@ describe('FavoritesComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [FavoritesComponent],
+            imports: [FavoritesPage],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(FavoritesComponent);
+        fixture = TestBed.createComponent(FavoritesPage);
         component = fixture.componentInstance;
         renderer = fixture.componentRef.injector.get(Renderer2);
 

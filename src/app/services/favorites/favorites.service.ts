@@ -28,9 +28,25 @@ export class FavoritesService {
         this.persist();
     }
 
+    favorite(id: number) {
+        if (!this.set.has(id)) {
+            this.set.add(id);
+            this.persist();
+        }
+    }
+
+    unfavorite(id: number) {
+        this.set.delete(id);
+        this.persist();
+    }
+
     isFavorited(id: number | string | null | undefined): boolean {
         const num = Number(id);
         return Number.isFinite(num) && this.set.has(num);
+    }
+
+    all(): number[] {
+        return [...this.set]; // whatever Set<number> you’re using internally
     }
 
     clear() {

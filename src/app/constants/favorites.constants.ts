@@ -1,8 +1,8 @@
-import { Album } from "../../models/album";
-import { Movie } from "../../models/movie";
-import { Song } from "../../models/song";
-import { TVShow } from "../../models/tv-show";
-import { VideoGame } from "../../models/video-game";
+import { Album } from "@models/album";
+import { Movie } from "@models/movie";
+import { Song } from "@models/song";
+import { TVShow } from "@models/tv-show";
+import { VideoGame } from "@models/video-game";
 
 export const songs: Song[] = [
     new Song("Humility", "Gorillaz", "gorillaz_the_now_now.jpg"),

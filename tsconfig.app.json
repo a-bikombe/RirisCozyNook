@@ -17,6 +17,12 @@
             ],
             "@services/*": [
                 "app/services/*"
+            ],
+            "@constants/*": [
+                "app/constants/*"
+            ],
+            "@environments/*": [
+                "environments/*"
             ]
         }
     },

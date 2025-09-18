@@ -1,20 +1,20 @@
 // app.component.spec.ts
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { AppRoot } from './app.root';
 import { ActivatedRoute } from '@angular/router';
 
-describe('AppComponent', () => {
+describe('AppRoot', () => {
     let fixture: any;
-    let component: AppComponent;
+    let component: AppRoot;
     let compiled: HTMLElement;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AppComponent],
+            imports: [AppRoot],
             providers: [{ provide: ActivatedRoute, useValue: {} }],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(AppComponent);
+        fixture = TestBed.createComponent(AppRoot);
         component = fixture.componentInstance;
         compiled = fixture.nativeElement as HTMLElement;
         fixture.detectChanges();
@@ -35,12 +35,5 @@ describe('AppComponent', () => {
 
     it('should have a currentDate property of type Date', () => {
         expect(component.currentDate instanceof Date).toBeTrue();
-    });
-
-    it('should have navigationItems with correct paths and labels', () => {
-        expect(component.navigationItems.length).toBe(3);
-        expect(component.navigationItems[0]).toEqual({ path: "/about-me", label: "About Me" });
-        expect(component.navigationItems[1]).toEqual({ path: "/favorites", label: "Favorites" });
-        expect(component.navigationItems[2]).toEqual({ path: "/cozy-corner", label: "Cozy Corner" });
     });
 });

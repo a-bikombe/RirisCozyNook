@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CrewMember } from '@models/crew.interface';
-import { crew } from '../about-me.constants';
+import { crew } from '@constants/about-me.constants';
 
 @Component({
     selector: 'app-crew',

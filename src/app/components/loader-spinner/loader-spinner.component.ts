@@ -16,12 +16,3 @@ export class LoaderSpinnerComponent {
     /** screen reader text */
     @Input() label = 'Loading…';
 }
-
-// <!-- default -->
-// <app-loader - spinner > </app-loader>
-
-// <!--smaller -->
-// <app-loader-spinner [size]="24"></app-loader-spinner>
-
-// <!--larger + custom color-->
-// <app-loader-spinner [size]="80" color="tomato"></app-loader-spinner>

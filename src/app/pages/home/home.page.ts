@@ -6,11 +6,11 @@ import { RouterLink } from '@angular/router';
     selector: 'home',
     standalone: true,
     imports: [CommonModule, RouterLink],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss'
+    templateUrl: './home.page.html',
+    styleUrl: './home.page.scss'
 })
 
-export class HomeComponent {
+export class HomePage {
     header: string = "Hi, I'm";
     name: string = "Arianna";
     mainTitle: string = "Featured Sections";

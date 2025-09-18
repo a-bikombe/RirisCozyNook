@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CrewComponent } from './crew.component';
 import { CommonModule } from '@angular/common';
-import { crew } from '../about-me.constants';
+import { crew } from '@constants/about-me.constants';
 
 describe('CrewComponent', () => {
     let component: CrewComponent;

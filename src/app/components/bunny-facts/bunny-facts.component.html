@@ -1,0 +1,49 @@
+<section class="flex row center bunny-facts" [attr.aria-busy]="loading">
+    @if (!fact) {
+        <app-loader-dot></app-loader-dot>
+    } @else {
+        <p>
+            <button
+                class="copy-btn"
+                [cdkCopyToClipboard]="fact.fact"
+                (cdkCopyToClipboardCopied)="onCopy($event)"
+                (mouseenter)="resetCopied()"
+            >
+                <img
+                    class="copy-icon"
+                    [src]="copied ? 'svgs/check.svg' : 'svgs/copy.svg'"
+                    alt="copy icon"
+                />
+            </button>
+            @if (fact) {
+                <button (click)="toggleFavorite()">
+                    @if (favorited) {
+                        <app-favorite-icon-filled></app-favorite-icon-filled>
+                    }
+                    @if (!favorited) {
+                        <app-favorite-icon-outline></app-favorite-icon-outline>
+                    }
+                </button>
+            }
+            {{ fact!.fact }}
+        </p>
+    }
+</section>
+
+<section *ngIf="!loading">
+    <ul class="center list facts">
+        @for (favoritedFact of facts; track favoritedFact.id) {
+            <li class="fact-row">
+                <button
+                    class="fav-btn"
+                    (click)="favorites.unfavorite(favoritedFact.id); reload()"
+                    [attr.aria-pressed]="favorites.isFavorited(favoritedFact.id)"
+                >
+                    <app-favorite-icon-filled></app-favorite-icon-filled>
+                </button>
+
+                <span class="fact-text">{{ favoritedFact.fact }}</span>
+            </li>
+        }
+    </ul>
+</section>
