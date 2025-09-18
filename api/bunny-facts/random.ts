@@ -3,7 +3,7 @@ import { sql } from "../db.js";
 export async function GET() {
     try {
         const rows = await sql`
-            SELECT fact
+            SELECT id, fact
             FROM bunny_facts
             ORDER BY RANDOM()
             LIMIT 1
