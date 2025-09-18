@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
 import { BunnyFact } from '@models/bunny-fact.interface';
+import { environment } from '@environments/environment';
 
 @Injectable({
     providedIn: 'root'
