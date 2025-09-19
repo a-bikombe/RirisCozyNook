@@ -1,31 +1,37 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { funFacts, skillsHobbies, personality } from '../../constants/about-me.constants';
-import { CrewComponent } from '@components/crew/crew.component';
 
 @Component({
     selector: 'app-about-me',
     standalone: true,
     imports: [
-        CrewComponent,
         CommonModule
     ],
     templateUrl: './about-me.page.html',
     styleUrl: './about-me.page.scss'
 })
-export class AboutMePage {
+export class AboutMePage implements OnInit {
     @ViewChild('aboutMeDialog') aboutMeDialog!: ElementRef<HTMLDialogElement>;
 
+    age: number = new Date(Date.now()).getFullYear() - 2002;
+    occupation: string = "Software Engineer";
     hasError: boolean = false;
+
+    ngOnInit() {
+        let today = new Date(Date.now());
+        if (today.getMonth() <= 5 && today.getDay() < 17) {
+            this.age = this.age - 1;
+        }
+    }
     isLoading: boolean = true;
     funFacts: string[] = funFacts;
     skillsHobbies: string[] = skillsHobbies;
     personality: string[] = personality;
-
     dialogTitle: string = '';
     dialogItems: string[] = [];
 
-    constructor(private renderer: Renderer2) { }
+    constructor(private renderer: Renderer2) {}
 
     openDialog(title: string, items: string[]) {
         this.dialogTitle = `My ${title}!`;

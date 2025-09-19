@@ -1,3 +1,5 @@
+<h2>{{ title }}</h2>
+
 <section class="flex row center bunny-facts" [attr.aria-busy]="loading">
     @if (!fact) {
         <app-loader-dot></app-loader-dot>
@@ -22,8 +24,9 @@
                     aria-label="Toggle favorite"
                 >
                     <app-favorite-icon
+                        class="fav-icon"
                         [filled]="favorited"
-                        [size]="22"
+                        [size]="20"
                         color="#e63946"
                     ></app-favorite-icon>
                 </button>
@@ -46,7 +49,7 @@
                 >
                     <app-favorite-icon
                         [filled]="true"
-                        [size]="22"
+                        [size]="20"
                         color="#e63946"
                     ></app-favorite-icon>
                 </button>

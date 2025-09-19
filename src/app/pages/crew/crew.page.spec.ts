@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CrewComponent } from './crew.component';
+import { CrewPage } from './crew.page';
 import { CommonModule } from '@angular/common';
 import { crew } from '@constants/about-me.constants';
 
-describe('CrewComponent', () => {
-    let component: CrewComponent;
-    let fixture: ComponentFixture<CrewComponent>;
+describe('CrewPage', () => {
+    let component: CrewPage;
+    let fixture: ComponentFixture<CrewPage>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [CommonModule, CrewComponent]
+            imports: [CommonModule, CrewPage]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(CrewComponent);
+        fixture = TestBed.createComponent(CrewPage);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

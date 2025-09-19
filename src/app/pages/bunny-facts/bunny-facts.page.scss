@@ -1,0 +1,22 @@
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    img {
+        width: 1rem;
+    }
+}
+
+.copy-icon {
+    width: 20px;
+}
+
+.copy-icon {
+    transition: transform 0.1s ease, filter 0.1s ease;
+
+    &:hover {
+        transform: scale(1.2);
+        filter: brightness(0) saturate(200%) contrast(300%);
+    }
+}

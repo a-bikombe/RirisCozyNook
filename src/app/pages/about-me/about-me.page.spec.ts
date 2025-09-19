@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testin
 import { AboutMePage } from './about-me.page';
 import { Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CrewComponent } from '@components/crew/crew.component';
 
 describe('AboutMePage', () => {
     let component: AboutMePage;
@@ -11,7 +10,7 @@ describe('AboutMePage', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AboutMePage, CrewComponent, CommonModule]
+            imports: [AboutMePage, CommonModule]
         }).compileComponents();
 
         fixture = TestBed.createComponent(AboutMePage);

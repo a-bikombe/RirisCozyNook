@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class FavoriteIconComponent {
     @Input() filled = false;
-    @Input() size = 24;
+    @Input() size = 20;
     @Input() color = 'currentColor';
     @Input() strokeWidth = 2;
 }

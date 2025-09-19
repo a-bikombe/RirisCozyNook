@@ -11,7 +11,9 @@ import { NavigationItem } from '@models/navigation-item.interface';
 export class NavbarComponent {
     navigationItems: NavigationItem[] = [
         { path: "/about-me", label: "About Me" },
+        { path: "/crew", label: "My Crew" },
         { path: "/favorites", label: "Favorites" },
-        { path: "/cozy-corner", label: "Cozy Corner" }
+        { path: "/playlist", label: "My Playlist" },
+        { path: "/bunny-facts", label: "Bunny Facts" }
     ];
 }

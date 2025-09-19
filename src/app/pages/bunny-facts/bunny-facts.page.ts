@@ -8,12 +8,13 @@ import { BunnyFactService } from '@services/bunny-fact/bunny-fact.service';
 import { FavoritesService } from '@services/favorites/favorites.service';
 
 @Component({
-    selector: 'app-bunny-facts',
+    selector: 'bunny-facts',
     imports: [CommonModule, ClipboardModule, LoaderDotComponent, FavoriteIconComponent],
-    templateUrl: './bunny-facts.component.html',
-    styleUrl: './bunny-facts.component.scss'
+    templateUrl: './bunny-facts.page.html',
+    styleUrl: './bunny-facts.page.scss'
 })
-export class BunnyFactsComponent {
+export class BunnyFactsPage {
+    title: string = "Fun Facts About Bunnies!";
     facts: BunnyFact[] = [];
     fact: BunnyFact | null = null;
     copied: boolean = false;

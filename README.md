@@ -1,141 +1,99 @@
-# Riri's Cozy Nook 🪷✨
+# Riri's Cozy Nook
 
-A cozy-core full-stack web app built with Angular, Node.js (Vercel Serverless), and a splash of baddie energy. You're stepping into a nook of vibes, visuals, and very cute components.
+Welcome to Riri's Cozy Nook! This is a personal Angular web app for sharing favorites, bunny facts, playlists, and cozy vibes.
 
----
+## Features
 
-## 🛠 Tech Stack
+- **Favorites**: Songs, albums, movies, TV shows, and games with cover images and lists.
+- **Bunny Facts**: Random bunny facts fetched from an API.
+- **Playlist**: Spotify playlist.
+- **About Me**: Fun facts, skills, and hobbies.
+- **Crew**: Special people in my life.
+- **404 Page**: Custom not-found experience.
+- **Dialogs**: Clickable buttons to show favorite colors, animals, foods, snacks, and artists.
 
-- **Frontend:** Angular 17+, TypeScript, SCSS
-- **Backend:** Node.js API routes (via Vercel Serverless)
-- **Database:** Neon (Postgres, hosted)
-- **E2E Testing:** Playwright
-- **Unit Testing:** Jasmine + Karma
-- **Deployment:** Vercel
-- **Styling:** Custom SCSS with pastel + cozy themes
-- **Dev Tools:** Prettier, .editorconfig
+## Tech Stack
 
----
+- **Angular** (standalone components)
+- **TypeScript**
+- **Playwright** (E2E tests)
+- **CDK Clipboard**
+- **SCSS** for styling
 
-## 📁 File Structure
+## Getting Started
+
+1. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment**
+
+   - Copy `.env.example` to `.env` and set your `DATABASE_URL`.
+
+3. **Run the app**
+
+   ```bash
+   npm start
+   ```
+
+4. **Run tests**
+
+   ```bash
+   npm test
+   # or for E2E
+   npx playwright test
+   ```
+
+## Project Structure
 
 ```plaintext
-RirisCozyNook/
-├── api/                      # Serverless API functions
-│   └── crew.js               # Example endpoint: GET crew data
-├── e2e/                      # Playwright end-to-end tests
-│   ├── app.spec.ts
-│   └── pages/
-├── public/images/           # Character image assets
-│   ├── evan.png
-│   ├── mo.png
-│   └── ...
-├── public/gifs/           # Character image assets
-├── src/                     # Angular app source
-│   ├── app/
-│   │   ├── models/          # TypeScript interfaces
-│   │   ├── pages/
-│   │   │   ├── about-me/
-│   │   │   │   ├── crew/    # Nested component
-│   │   │   └── cozy-corner/
-│   │   ├── app.routes.ts    # Route definitions
-│   │   └── ...
-│   ├── styles.scss
-│   ├── _variables.scss
-│   └── main.ts
-├── .vercel/                 # Vercel deployment config
-├── .env.development.local   # Local environment variables
-├── angular.json             # Angular config
-├── package.json             # Dependencies + scripts
-├── playwright.config.ts     # E2E test setup
-└── README.md                # You're here!
+public/
+  gifs/
+  images/
+    characters/
+    covers/
+      albums/
+      games/
+      movies-tv/
+  svgs/
+    check.svg
+    copy.svg
+src/
+  app/
+    components/
+      favorite-icon/
+      loader-dot/
+      loader-spinner/
+      navbar/
+    constants/
+    models/
+    pages/
+      about-me/
+      bunny-facts/
+      crew/
+      favorites/
+      home/
+      not-found/
+      playlist/
+    services/
+      bunny-fact/
+      favorites/
+e2e/
+  pages/
+api/
 ```
 
----
+## API Endpoints
 
-## 🚀 Getting Started
+- `/api/bunny-facts` - Returns bunny facts
+- `/api/bunny-facts/random` - Returns a random bunny fact
 
-### Install Dependencies
+## License
 
-```bash
-npm install
-```
-
-### Start the Dev Server
-
-```bash
-ng serve
-```
-
-Go to `http://localhost:4200` to view the app.
+MIT
 
 ---
 
-## 🧪 Running Tests
-
-### Unit Tests (Jasmine + Karma)
-
-```bash
-ng test
-```
-
-### E2E Tests (Playwright)
-
-```bash
-npx playwright test
-```
-
-You can also run specific tests from `e2e/app.spec.ts` or use custom page objects in `e2e/pages`.
-
----
-
-## 🌐 API Routes
-
-Deployed via Vercel’s serverless functions in the `/api` folder. Example:
-
-```bash
-GET /api/crew
-```
-
-Returns JSON data of your crew members.
-
----
-
-## ✨ Custom Styling
-
-All styles are written in SCSS with cozy-core variables in `_variables.scss`.
-
----
-
-## 🧼 Code Style
-
-This repo uses:
-
-- `.editorconfig` for consistent spacing
-- `.prettierrc` for linting and formatting
-
-Use:
-
-```bash
-npx prettier --write .
-```
-
----
-
-## 🧭 Roadmap Ideas (Optional)
-
-- Add favorites page with local storage or DB-backed state
-- Integrate bunny fact API for daily fluff
-- Storybook setup for isolated UI testing
-- Clerk/Auth0 login if you ever want personalization
-
----
-
-## 🌸 Live Preview
-
-Hosted on **Vercel**  
-🪩 <https://riris-cozy-nook.vercel.app> _(Replace with your actual link)_
-
----
-
-## 🖤 Made with love (and TypeScript) by Arianna
+Made with ❤️ by Riri

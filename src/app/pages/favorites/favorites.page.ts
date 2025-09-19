@@ -17,7 +17,7 @@ import { VideoGame } from '@models/video-game';
 
 export class FavoritesPage {
     @ViewChild('favoritesDialog') favoritesDialog!: ElementRef<HTMLDialogElement>;
-    title: string = 'Favorites';
+    title: string = 'My Favorite Things!';
 
     songs: Song[] = songs;
     albums: Album[] = albums;

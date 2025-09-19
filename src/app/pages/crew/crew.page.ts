@@ -4,12 +4,12 @@ import { CrewMember } from '@models/crew.interface';
 import { crew } from '@constants/about-me.constants';
 
 @Component({
-    selector: 'app-crew',
+    selector: 'crew',
     imports: [CommonModule],
-    templateUrl: './crew.component.html',
-    styleUrl: './crew.component.scss'
+    templateUrl: './crew.page.html',
+    styleUrl: './crew.page.scss'
 })
-export class CrewComponent {
+export class CrewPage {
     title: string = "Meet My Crew";
     hasError: boolean = false;
     isLoading: boolean = true;

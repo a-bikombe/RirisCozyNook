@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BunnyFactsComponent } from './bunny-facts.component';
+import { BunnyFactsPage } from './bunny-facts.page';
 
-describe('BunnyFactsComponent', () => {
-    let component: BunnyFactsComponent;
-    let fixture: ComponentFixture<BunnyFactsComponent>;
+describe('BunnyFactsPage', () => {
+    let component: BunnyFactsPage;
+    let fixture: ComponentFixture<BunnyFactsPage>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [BunnyFactsComponent]
+            imports: [BunnyFactsPage]
         })
             .compileComponents();
 
-        fixture = TestBed.createComponent(BunnyFactsComponent);
+        fixture = TestBed.createComponent(BunnyFactsPage);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
