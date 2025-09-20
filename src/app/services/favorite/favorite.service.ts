@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
-export class FavoritesService {
+export class FavoriteService {
     private key = 'favoriteFactIds';
     private set = this.load();
 
