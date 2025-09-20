@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-loader-spinner',
+    selector: 'loader-spinner-component',
     standalone: true,
     imports: [CommonModule],
     templateUrl: './loader-spinner.component.html',

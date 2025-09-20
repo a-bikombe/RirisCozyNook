@@ -2,7 +2,7 @@
 
 <section class="flex row center bunny-facts" [attr.aria-busy]="loading">
     @if (!fact) {
-        <app-loader-dot></app-loader-dot>
+        <loader-dot-component></loader-dot-component>
     } @else {
         <p>
             <button
@@ -23,12 +23,12 @@
                     [attr.aria-pressed]="favorited"
                     aria-label="Toggle favorite"
                 >
-                    <app-favorite-icon
+                    <favorite-icon-component
                         class="fav-icon"
                         [filled]="favorited"
                         [size]="20"
                         color="#e63946"
-                    ></app-favorite-icon>
+                    ></favorite-icon-component>
                 </button>
             }
             {{ fact!.fact }}
@@ -47,11 +47,11 @@
                         favorites.isFavorited(favoritedFact.id)
                     "
                 >
-                    <app-favorite-icon
+                    <favorite-icon-component
                         [filled]="true"
                         [size]="20"
                         color="#e63946"
-                    ></app-favorite-icon>
+                    ></favorite-icon-component>
                 </button>
 
                 <span class="fact-text">{{ favoritedFact.fact }}</span>

@@ -1,0 +1,17 @@
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { funFacts, skillsHobbies, personality } from '../../constants/about-me.constants';
 
 @Component({
-    selector: 'app-about-me',
+    selector: 'about-me',
     standalone: true,
     imports: [
         CommonModule

@@ -22,6 +22,11 @@
     }
 }
 
+.dark {
+    background-color: $black;
+    color: $white;
+}
+
 body {
     background-color: $white;
     color: $black;

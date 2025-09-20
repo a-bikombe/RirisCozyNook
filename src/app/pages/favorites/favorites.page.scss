@@ -10,7 +10,6 @@ ol.list {
 
         &::before {
             counter-increment: myCounter;
-            /* Increments 'myCounter' by 1 */
             content: counter(myCounter) ". ";
         }
     }

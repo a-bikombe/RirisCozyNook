@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NavigationItem } from '@models/navigation-item.interface';
 
 @Component({
-    selector: 'app-navbar',
+    selector: 'navbar-component',
     imports: [RouterLink],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.scss'

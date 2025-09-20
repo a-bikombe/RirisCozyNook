@@ -34,8 +34,8 @@
             "@constants/*": [
                 "app/constants/*"
             ],
-            "@environments/*": [
-                "environments/*"
+            "@env/*": [
+                "env/*"
             ]
         }
     },

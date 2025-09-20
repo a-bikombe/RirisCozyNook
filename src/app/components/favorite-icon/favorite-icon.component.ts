@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-favorite-icon',
+    selector: 'favorite-icon-component',
     imports: [],
     templateUrl: './favorite-icon.component.html',
     styleUrl: './favorite-icon.component.scss'

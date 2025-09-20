@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-loader-dot',
+    selector: 'loader-dot-component',
     standalone: true,
     imports: [CommonModule],
     templateUrl: './loader-dot.component.html',

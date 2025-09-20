@@ -1,13 +1,13 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BunnyFact } from '@models/bunny-fact.interface';
-import { environment } from '@environments/environment';
+import { env } from 'env/env';
 
 @Injectable({
     providedIn: 'root'
 })
 export class BunnyFactService {
-    private apiUrl = `${environment.apiBase}/bunny-facts`;
+    private apiUrl = `${env.apiBase}/bunny-facts`;
     private http = inject(HttpClient);
 
     all() {
