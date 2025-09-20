@@ -42,9 +42,9 @@
             <li class="fact-row">
                 <button
                     class="fav-btn"
-                    (click)="favorites.unfavorite(favoritedFact.id); reload()"
+                    (click)="favorite.unfavorite(favoritedFact.id); reload()"
                     [attr.aria-pressed]="
-                        favorites.isFavorited(favoritedFact.id)
+                        favorite.isFavorited(favoritedFact.id)
                     "
                 >
                     <favorite-icon-component

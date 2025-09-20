@@ -12,21 +12,31 @@ section {
 }
 
 .iframe-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
+    position: relative;
+    display: block;
+    height: 500px;
+    overflow: hidden;
 
     .iframe-spinner {
         position: absolute;
+        z-index: 2;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 10;
+    }
+
+    iframe {
+        display: block;
+        height: 100%;
+        border: 0;
+        border-radius: 12px;
     }
 }
 
-
+header {
+    position: relative;
+    z-index: 3;
+}
 
 @media only screen and (max-width: 600px) {
     .row {

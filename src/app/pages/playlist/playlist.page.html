@@ -1,8 +1,8 @@
 <header>
     <h2>{{ header }}</h2>
 </header>
+
 <section class="iframe-wrapper">
-    <!-- spinner -->
     <loader-spinner-component
         *ngIf="loadingIframe"
         [size]="100"
@@ -14,7 +14,7 @@
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/playlist/3zGtuvU3yw61IN8o2jPc1m?utm_source=generator"
         width="100%"
-        height="400"
+        height="500"
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         (load)="onIframeLoad()"
