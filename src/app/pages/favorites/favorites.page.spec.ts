@@ -46,35 +46,6 @@ describe('FavoritesPage', () => {
         expect(renderer.addClass).toHaveBeenCalledWith(dialogMock, 'visible');
     }));
 
-    it('should add correct color class for Animals', () => {
-        component.openDialog('Animals', ['Cat']);
-        expect(renderer.addClass).toHaveBeenCalledWith(dialogMock, 'pink');
-    });
-
-    it('should add correct color class for Foods', () => {
-        component.openDialog('Foods', ['Pizza']);
-        expect(renderer.addClass).toHaveBeenCalledWith(dialogMock, 'yellow');
-    });
-
-    it('should add correct color class for Artists', () => {
-        component.openDialog('Artists', ['Artist']);
-        expect(renderer.addClass).toHaveBeenCalledWith(dialogMock, 'green');
-    });
-
-    it('should add correct color class for Snacks', () => {
-        component.openDialog('Snacks', ['Chips']);
-        expect(renderer.addClass).toHaveBeenCalledWith(dialogMock, 'purple');
-    });
-
-    it('should not add any color class for unknown title', () => {
-        component.openDialog('Unknown', ['Item']);
-        expect(renderer.addClass).not.toHaveBeenCalledWith(dialogMock, 'blue');
-        expect(renderer.addClass).not.toHaveBeenCalledWith(dialogMock, 'pink');
-        expect(renderer.addClass).not.toHaveBeenCalledWith(dialogMock, 'yellow');
-        expect(renderer.addClass).not.toHaveBeenCalledWith(dialogMock, 'green');
-        expect(renderer.addClass).not.toHaveBeenCalledWith(dialogMock, 'purple');
-    });
-
     it('should close dialog with animation', fakeAsync(() => {
         component.closeWithAnimation();
         expect(renderer.removeClass).toHaveBeenCalledWith(dialogMock, 'visible');

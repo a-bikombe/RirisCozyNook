@@ -105,6 +105,11 @@
                             "zone.js",
                             "zone.js/testing"
                         ],
+                        "stylePreprocessorOptions": {
+                            "includePaths": [
+                                "src"
+                            ]
+                        },
                         "tsConfig": "tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [

@@ -15,19 +15,33 @@ describe('NotFoundPage', () => {
         fixture.detectChanges();
     });
 
-    it('should create the component', () => {
-        expect(component).toBeTruthy();
+    it('should render the main heading text', () => {
+        const compiled = fixture.nativeElement as HTMLElement;
+        const h2 = compiled.querySelector('h2');
+        expect(h2).toBeTruthy();
+        expect(h2?.textContent).toContain("Looks like you've found an unmarked nook");
     });
 
-    it('should render the template', () => {
+    it('should render the subheading text', () => {
         const compiled = fixture.nativeElement as HTMLElement;
-        expect(compiled.textContent?.toLowerCase()).toContain("unmarked nook");
+        const h3 = compiled.querySelector('h3.center');
+        expect(h3).toBeTruthy();
+        expect(h3?.textContent).toContain("Let's get you back to somewhere warm and familiar.");
     });
 
-    it('should render a heading', () => {
+    it('should include a sad bunny gif image with an alt attribute', () => {
         const compiled = fixture.nativeElement as HTMLElement;
-        const heading = compiled.querySelector('h1,h2,h3');
-        expect(heading).toBeTruthy();
-        expect(heading?.textContent?.toLowerCase()).toContain('nook');
+        const img = compiled.querySelector('section img') as HTMLImageElement | null;
+        expect(img).toBeTruthy();
+        expect(img?.getAttribute('src')).toContain('gifs/sad_bunny.gif');
+        // allow empty alt but assert attribute exists
+        expect(img?.hasAttribute('alt')).toBeTrue();
     });
+
+    it('section should have layout classes', () => {
+        const compiled = fixture.nativeElement as HTMLElement;
+        const section = compiled.querySelector('section.flex.row.center');
+        expect(section).toBeTruthy();
+    });
+
 });

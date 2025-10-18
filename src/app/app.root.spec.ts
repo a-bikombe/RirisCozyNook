@@ -36,4 +36,11 @@ describe('AppRoot', () => {
     it('should have a currentDate property of type Date', () => {
         expect(component.currentDate instanceof Date).toBeTrue();
     });
+
+    it('should include theme and navbar components in header', () => {
+        const theme = compiled.querySelector('theme-component');
+        const nav = compiled.querySelector('navbar-component');
+        expect(theme).toBeTruthy();
+        expect(nav).toBeTruthy();
+    });
 });
