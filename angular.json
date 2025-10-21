@@ -60,8 +60,8 @@
                             "outputHashing": "all",
                             "fileReplacements": [
                                 {
-                                    "replace": "src/env/env.ts",
-                                    "with": "src/env/env.ts"
+                                    "replace": "env/env.ts",
+                                    "with": "env/env.ts"
                                 }
                             ]
                         },
@@ -71,8 +71,8 @@
                             "sourceMap": true,
                             "fileReplacements": [
                                 {
-                                    "replace": "src/env/env.ts",
-                                    "with": "src/env/env.dev.ts"
+                                    "replace": "env/env.ts",
+                                    "with": "env/env.dev.ts"
                                 }
                             ]
                         }
