@@ -1,0 +1,59 @@
+<h2>{{ title }}</h2>
+
+<h3>Here's my ranked roster for each show of the week:</h3>
+
+<section class="flex row center">
+    <table>
+        <tr>
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+            <th>WEDNESDAY</th>
+            <th>THURSDAY</th>
+            <th>FRIDAY</th>
+        </tr>
+        <tr>
+            <th>Monday Night Raw</th>
+            <th>WWE NXT</th>
+            <th>AEW Dynamite</th>
+            <th>TNA Impact</th>
+            <th>Friday Night SmackDown</th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    @for (wrestler of wrestlers["Raw"]; track wrestler.name) {
+                        <li>{{ wrestler.name }}</li>
+                    }
+                </ol>
+            </td>
+            <td>
+                <ol>
+                    @for (wrestler of wrestlers["NXT"]; track wrestler.name) {
+                        <li>{{ wrestler.name }}</li>
+                    }
+                </ol>
+            </td>
+            <td>
+                <ol>
+                    @for (wrestler of wrestlers["Dynamite"]; track wrestler.name) {
+                        <li>{{ wrestler.name }}</li>
+                    }
+                </ol>
+            </td>
+            <td>
+                <ol>
+                    @for (wrestler of wrestlers["Impact"]; track wrestler.name) {
+                        <li>{{ wrestler.name }}</li>
+                    }
+                </ol>
+            </td>
+            <td>
+                <ol>
+                    @for (wrestler of wrestlers["SmackDown"]; track wrestler.name) {
+                        <li>{{ wrestler.name }}</li>
+                    }
+                </ol>
+            </td>
+        </tr>
+    </table>
+</section>

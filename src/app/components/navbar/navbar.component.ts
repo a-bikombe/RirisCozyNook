@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NavigationItem } from '@models/navigation-item.interface';
+import { navRoutes } from '@constants/routes.constants';
 
 @Component({
     selector: 'navbar-component',
@@ -9,11 +10,5 @@ import { NavigationItem } from '@models/navigation-item.interface';
     styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-    navigationItems: NavigationItem[] = [
-        { path: "/about-me", label: "About Me" },
-        { path: "/crew", label: "My Crew" },
-        { path: "/favorites", label: "Favorites" },
-        { path: "/playlist", label: "My Playlist" },
-        { path: "/bunny-facts", label: "Bunny Facts" }
-    ];
+    navigationItems: NavigationItem[] = navRoutes;
 }

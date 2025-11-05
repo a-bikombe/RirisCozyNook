@@ -1,0 +1,39 @@
+@use "variables" as *;
+
+section {
+    margin: 2rem 5rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    margin: none;
+    padding: none;
+}
+
+table {
+    background-color: none;
+    border-radius: 0.2rem;
+    width: 70%;
+
+    th,
+    td {
+        padding: 0.7rem;
+    }
+
+    th {
+        background-color: $pink-light;
+        min-width: 15rem;
+    }
+
+    td {
+        background-color: $white;
+        vertical-align: top;
+
+        img {
+            max-height: 6rem;
+        }
+    }
+}
