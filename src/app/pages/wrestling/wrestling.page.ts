@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { wrestlersRanked } from '@constants/wrestlers.constants';
+import { wrestlersRanked } from '@constants/wrestler.constants';
 
 @Component({
     selector: 'wrestling',

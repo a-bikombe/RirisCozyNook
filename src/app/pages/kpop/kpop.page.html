@@ -1,1 +1,32 @@
-<p>kpop works!</p>
+<h2>{{ title }}</h2>
+
+<h3>Here's my ranked roster for each group:</h3>
+
+<section class="flex row center">
+    <table>
+        <tr>
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+        </tr>
+        <tr>
+            <th>Monday Night Raw</th>
+            <th>WWE NXT</th>
+        </tr>
+        <tr>
+            <td>
+                <ol>
+                    @for (member of kpopMembers["Raw"]; track member.name) {
+                        <li>{{ member.name }}</li>
+                    }
+                </ol>
+            </td>
+            <td>
+                <ol>
+                    @for (member of kpopMembers["NXT"]; track member.name) {
+                        <li>{{ member.name }}</li>
+                    }
+                </ol>
+            </td>
+        </tr>
+    </table>
+</section>
